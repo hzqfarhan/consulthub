@@ -121,8 +121,10 @@ export function ConsultHubProvider({ children }) {
       if (cleanId) {
         user = users.lecturers.find(
           (l) =>
-            l.staffId.toUpperCase() === cleanId ||
-            l.email.toLowerCase() === identifier.trim().toLowerCase()
+            (l.staffId && l.staffId.toUpperCase() === cleanId) ||
+            (l.username && l.username.toLowerCase() === cleanId.toLowerCase()) ||
+            (l.id && l.id.toLowerCase() === cleanId.toLowerCase()) ||
+            (l.email && l.email.toLowerCase() === identifier.trim().toLowerCase())
         );
       }
       if (!user) {

@@ -10,16 +10,20 @@ import {
   Phone,
   Calendar,
   ChevronRight,
-  Filter,
   GraduationCap,
+  BookOpen,
+  ExternalLink,
+  ShieldCheck,
+  Building,
 } from 'lucide-react';
 
 const DEPARTMENTS = [
   'All',
   'Software Engineering',
-  'Computer Science',
-  'Data Science',
-  'Information Security',
+  'Information Security & Web Technology',
+  'Multimedia Computing',
+  "Dean's Office",
+  'Postgraduate Studies',
 ];
 
 export default function BrowseLecturers() {
@@ -30,13 +34,38 @@ export default function BrowseLecturers() {
   const lecturers = users.lecturers || [];
 
   const filteredLecturers = lecturers.filter((lecturer) => {
-    const matchesDept = selectedDept === 'All' || lecturer.department === selectedDept;
-    const q = searchQuery.toLowerCase();
-    const matchesSearch =
-      lecturer.name.toLowerCase().includes(q) ||
-      lecturer.specialization.toLowerCase().includes(q) ||
-      lecturer.department.toLowerCase().includes(q);
-    return matchesDept && matchesSearch;
+    const matchesDept =
+      selectedDept === 'All' ||
+      (lecturer.department &&
+        lecturer.department.toLowerCase().includes(selectedDept.toLowerCase()));
+
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) return matchesDept;
+
+    const matchesName = lecturer.name?.toLowerCase().includes(q);
+    const matchesCleanName = lecturer.cleanName?.toLowerCase().includes(q);
+    const matchesRoom = (lecturer.office || lecturer.roomLocation || '').toLowerCase().includes(q);
+    const matchesDeptName = (lecturer.department || '').toLowerCase().includes(q);
+    const matchesSpec =
+      (lecturer.specialization && lecturer.specialization.toLowerCase().includes(q)) ||
+      (lecturer.specialities &&
+        lecturer.specialities.some((s) => s.toLowerCase().includes(q)));
+    const matchesSubjects =
+      lecturer.currentSubjects &&
+      lecturer.currentSubjects.some(
+        (sub) =>
+          sub.code.toLowerCase().includes(q) || sub.name.toLowerCase().includes(q)
+      );
+
+    return (
+      matchesDept &&
+      (matchesName ||
+        matchesCleanName ||
+        matchesRoom ||
+        matchesDeptName ||
+        matchesSpec ||
+        matchesSubjects)
+    );
   });
 
   const getSlotCount = (lecturerId) => {
@@ -48,8 +77,11 @@ export default function BrowseLecturers() {
     <div className="page-container">
       <div className="page-header-box">
         <div>
-          <h2>Browse Faculty Lecturers</h2>
-          <p>Find lecturers by department or specialization to schedule a consultation.</p>
+          <h2>FSKTM Faculty Lecturer Directory</h2>
+          <p>
+            Official faculty directory for Universiti Tun Hussein Onn Malaysia. Search by name,
+            office room, specialization, or course code (e.g. BIT34503).
+          </p>
         </div>
       </div>
 
@@ -59,7 +91,7 @@ export default function BrowseLecturers() {
           <Search size={18} className="search-icon" />
           <input
             type="text"
-            placeholder="Search by name, specialization, or department..."
+            placeholder="Search by lecturer name, room (PB-xxx-xx), course code, or specialization..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -83,8 +115,8 @@ export default function BrowseLecturers() {
       {filteredLecturers.length === 0 ? (
         <div className="empty-state">
           <GraduationCap size={44} className="empty-icon text-muted" />
-          <h4>No Lecturers Found</h4>
-          <p>No faculty members match your search criteria. Try adjusting your filters.</p>
+          <h4>No FSKTM Lecturers Found</h4>
+          <p>No faculty members match your search criteria. Try adjusting your search query or department filter.</p>
           <button
             type="button"
             className="btn btn-secondary btn-sm"
@@ -100,21 +132,26 @@ export default function BrowseLecturers() {
         <div className="lecturers-grid">
           {filteredLecturers.map((lecturer) => {
             const slotsCount = getSlotCount(lecturer.id);
+            const subjects = lecturer.currentSubjects || [];
+            const roomNumber = lecturer.roomLocation || lecturer.office || 'FSKTM Faculty';
+
             return (
               <div key={lecturer.id} className="lecturer-card">
                 <div className="lecturer-card-header">
                   <UTHMAvatar user={lecturer} size={56} className="avatar-lg" />
                   <div className="lecturer-info">
                     <h3>{lecturer.name}</h3>
-                    <span className="spec-badge">{lecturer.specialization}</span>
-                    <span className="dept-text">{lecturer.department}</span>
+                    <div className="badge-row" style={{ marginTop: '0.25rem', marginBottom: '0.25rem' }}>
+                      <span className="spec-badge">{lecturer.specialization}</span>
+                      <span className="dept-text">{lecturer.department}</span>
+                    </div>
                   </div>
                 </div>
 
                 <div className="lecturer-details-list">
                   <div className="detail-item">
                     <MapPin size={15} />
-                    <span>{lecturer.office}</span>
+                    <span>{roomNumber}</span>
                   </div>
                   <div className="detail-item">
                     <Mail size={15} />
@@ -125,6 +162,27 @@ export default function BrowseLecturers() {
                     <span>{lecturer.phone}</span>
                   </div>
                 </div>
+
+                {/* Active Teaching Subjects Preview */}
+                {subjects.length > 0 && (
+                  <div className="lecturer-subjects-preview">
+                    <div className="subjects-preview-header">
+                      <BookOpen size={13} className="text-muted" />
+                      <span>Semester 1 2026/2027 Teaching:</span>
+                    </div>
+                    <div className="subjects-tags-row">
+                      {subjects.slice(0, 2).map((sub) => (
+                        <span key={sub.code} className="sub-tag" title={sub.name}>
+                          <strong>{sub.code}</strong>
+                          <span className="sub-tag-name">{sub.name}</span>
+                        </span>
+                      ))}
+                      {subjects.length > 2 && (
+                        <span className="sub-tag-more">+{subjects.length - 2} more</span>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 <div className="lecturer-card-footer">
                   <span className="slots-badge">

@@ -3138,3 +3138,228 @@ svg {
     }
 }
 
+/* =========================================================================
+   FSKTM Lecturer Directory & Detail Styling
+   ========================================================================= */
+
+.lecturer-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.85rem 0;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.detail-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.detail-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.lecturer-subjects-preview {
+  margin: 0.75rem 0 0.85rem 0;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.subjects-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.subjects-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.sub-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+}
+
+.sub-tag strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.sub-tag-name {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+.sub-tag-more {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+/* Lecturer Detail Grid Layout */
+.lecturer-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .lecturer-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lecturer-academic-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.section-title-row h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.semester-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  margin-left: auto;
+}
+
+.teaching-subjects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subject-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all 0.2s var(--ease);
+}
+
+.subject-item-card:hover {
+  border-color: var(--primary);
+  background: var(--surface);
+}
+
+.subject-code-tag {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.65rem;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.subject-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.subject-meta-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.specialities-pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.speciality-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all 0.2s var(--ease);
+}
+
+.speciality-pill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--surface);
+}
+

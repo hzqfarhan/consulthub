@@ -1,0 +1,3774 @@
+/* =========================================================================
+   FSKTM Lecturer Directory - Type-Safe Production Export
+   Faculty of Computer Science and Information Technology, UTHM (FID 19)
+   Session: 2026/2027 Semester 1
+   ========================================================================= */
+
+export interface ActiveSubject {
+  code: string;
+  name: string;
+  session: string;
+  year: string;
+  isCurrentSemester?: boolean;
+}
+
+export interface Lecturer {
+  id: string;
+  name: string;
+  cleanName: string;
+  title: string;
+  role: string;
+  staffId?: string;
+  facultyCode: string;
+  facultyName: string;
+  department: string;
+  username?: string;
+  email: string;
+  phone: string;
+  roomLocation: string;
+  avatarUrl?: string;
+  communityUrl: string;
+  specialities: string[];
+  currentSubjects: ActiveSubject[];
+  isAvailableFYP: boolean;
+}
+
+export const FSKTM_LECTURERS: Lecturer[] = [
+  {
+    "id": "fsktm-mohd-farhan-bin-md-fudzee",
+    "name": "PROF. Ts. Dr. MOHD FARHAN BIN MD. FUDZEE",
+    "cleanName": "MOHD FARHAN BIN MD. FUDZEE",
+    "title": "PROF. Ts. Dr.",
+    "role": "Dean, FSKTM",
+    "staffId": "01364",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Dean's Office",
+    "username": "farhan",
+    "email": "farhan@uthm.edu.my",
+    "phone": "07-950 8872",
+    "roomLocation": "PB-101-06",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01364.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/farhan",
+    "specialities": [
+      "Information/Knowledge System: Modeling & Decision Making.",
+      "Multimedia: Adaptation",
+      "Computing",
+      "Applications",
+      "& Security."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC21102",
+        "name": "Professional Ethics And Occupational",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mollyza-binti-abd-majid",
+    "name": "PUAN MOLLYZA BINTI ABD MAJID",
+    "cleanName": "MOLLYZA BINTI ABD MAJID",
+    "title": "PUAN",
+    "role": "N6 SETIAUSAHA PEJABAT (TBK)",
+    "staffId": "01510",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Dean's Office",
+    "username": "mollyza",
+    "email": "mollyza@uthm.edu.my",
+    "phone": "07-950 8875",
+    "roomLocation": "PB-101-05A",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01510.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mollyza",
+    "specialities": [
+      "07- 950 887"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-zubaile-bin-abdullah",
+    "name": "PROF. MADYA Ts. Dr. ZUBAILE BIN ABDULLAH",
+    "cleanName": "ZUBAILE BIN ABDULLAH",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "Deputy Dean (Academic & International)",
+    "staffId": "01154",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Deputy Dean's Office",
+    "username": "zubaile",
+    "email": "zubaile@uthm.edu.my",
+    "phone": "07-950 8874",
+    "roomLocation": "PB-101-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01154.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zubaile",
+    "specialities": [
+      "Security System",
+      "Malware",
+      "Worms and Viruses",
+      "07- 950 8874",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS10103",
+        "name": "Information Security Fundamentals",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-shahreen-binti-kasim",
+    "name": "PROF. MADYA Dr. SHAHREEN BINTI KASIM",
+    "cleanName": "SHAHREEN BINTI KASIM",
+    "title": "PROF. MADYA Dr.",
+    "role": "Deputy Dean (Research, Development & Publication)",
+    "staffId": "02286",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Deputy Dean's Office",
+    "username": "shahreen",
+    "email": "shahreen@uthm.edu.my",
+    "phone": "07-950 8873",
+    "roomLocation": "PB-101-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02286.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/shahreen",
+    "specialities": [
+      "Bioinformatics",
+      "Soft Computing & Data Mining",
+      "07- 950 8873",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Information, Computer and Communication Technology (ICT) n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW33103",
+        "name": "Distributed Database",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-muhaini-binti-othman",
+    "name": "PROF. MADYA Dr. MUHAINI BINTI OTHMAN",
+    "cleanName": "MUHAINI BINTI OTHMAN",
+    "title": "PROF. MADYA Dr.",
+    "role": "Deputy Dean (Students Affair & Alumni)",
+    "staffId": "00908",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Deputy Dean's Office",
+    "username": "muhaini",
+    "email": "muhaini@uthm.edu.my",
+    "phone": "07-950 8937",
+    "roomLocation": "PB-101-09",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00908.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/muhaini",
+    "specialities": [
+      "Artificial Intelligence",
+      "Neural",
+      "Evolutionary and Fuzzy Computation.",
+      "07- 950 8937",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT21603",
+        "name": "Technopreneurship",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noris-binti-mansor",
+    "name": "PUAN NORIS BINTI MANSOR",
+    "cleanName": "NORIS BINTI MANSOR",
+    "title": "PUAN",
+    "role": "N6 SETIAUSAHA PEJABAT (TBK)",
+    "staffId": "01957",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Deputy Dean's Office",
+    "username": "noris",
+    "email": "noris@uthm.edu.my",
+    "phone": "07-950 8876",
+    "roomLocation": "PB-101-05A",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01957.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/noris",
+    "specialities": [
+      "07- 950 8876"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-zuraida-binti-bosri",
+    "name": "PUAN ZURAIDA BINTI BOSRI",
+    "cleanName": "ZURAIDA BINTI BOSRI",
+    "title": "PUAN",
+    "role": "N12 TIMBALAN PENDAFTAR",
+    "staffId": "00402",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "zuraida",
+    "email": "zuraida@uthm.edu.my",
+    "phone": "07-950 8883",
+    "roomLocation": "PB-005-2",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00402.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zuraida",
+    "specialities": [
+      "07- 950 8883"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mohd-azrai-bin-kamisan",
+    "name": "ENCIK MOHD AZRAI BIN KAMISAN",
+    "cleanName": "MOHD AZRAI BIN KAMISAN",
+    "title": "ENCIK",
+    "role": "N9 PENOLONG PENDAFTAR",
+    "staffId": "00646",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "azrai",
+    "email": "azrai@uthm.edu.my",
+    "phone": "07-950 8884",
+    "roomLocation": "PB-005-1",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00646.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azrai",
+    "specialities": [
+      "07- 950 8884",
+      "SOCIAL SCIENCE",
+      "Sociology of Politics",
+      "Other Sociology of Politics n.e.c."
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-faridah-binti-mohd-supanji",
+    "name": "PUAN FARIDAH BINTI MOHD SUPANJI",
+    "cleanName": "FARIDAH BINTI MOHD SUPANJI",
+    "title": "PUAN",
+    "role": "N6 PENOLONG PEGAWAI TADBIR KANAN (TBK)",
+    "staffId": "01326",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "faridah",
+    "email": "faridah@uthm.edu.my",
+    "phone": "07-950 8881",
+    "roomLocation": "PB-005A",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01326.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/faridah",
+    "specialities": [
+      "07- 950 8881"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mukhtar-bin-ismail",
+    "name": "ENCIK MUKHTAR BIN ISMAIL",
+    "cleanName": "MUKHTAR BIN ISMAIL",
+    "title": "ENCIK",
+    "role": "N2 PEMBANTU TADBIR (P/O) KANAN (TBK)",
+    "staffId": "02219",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "mukhtar",
+    "email": "mukhtar@uthm.edu.my",
+    "phone": "07-950 7184",
+    "roomLocation": "PB-005A",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02219.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mukhtar",
+    "specialities": [
+      "07- 950 7184"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-zam-zarina-binti-zainal-abidin",
+    "name": "PUAN ZAM ZARINA BINTI ZAINAL ABIDIN",
+    "cleanName": "ZAM ZARINA BINTI ZAINAL ABIDIN",
+    "title": "PUAN",
+    "role": "N2 PEMBANTU TADBIR (P/O) KANAN (TBK)",
+    "staffId": "01348",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "zzarina",
+    "email": "zzarina@uthm.edu.my",
+    "phone": "07-950 8882",
+    "roomLocation": "PB-005B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01348.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zzarina",
+    "specialities": [
+      "07- 950 8882"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-sahran-bin-amzah",
+    "name": "ENCIK SAHRAN BIN AMZAH",
+    "cleanName": "SAHRAN BIN AMZAH",
+    "title": "ENCIK",
+    "role": "N2 PEMBANTU TADBIR (P/O) KANAN (TBK)",
+    "staffId": "01543",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "sahran",
+    "email": "sahran@uthm.edu.my",
+    "phone": "07-950 8880",
+    "roomLocation": "PB-005B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01543.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sahran",
+    "specialities": [
+      "07- 950 8880"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-siti-noridah-binti-zainory",
+    "name": "PUAN SITI NORIDAH BINTI ZAINORY",
+    "cleanName": "SITI NORIDAH BINTI ZAINORY",
+    "title": "PUAN",
+    "role": "N2 PEMBANTU TADBIR (P/O) KANAN (TBK)",
+    "staffId": "02033",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "snoridah",
+    "email": "snoridah@uthm.edu.my",
+    "phone": "07-950 8885",
+    "roomLocation": "-",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02033.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/snoridah",
+    "specialities": [],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-siti-aida-binti-md-noor",
+    "name": "PUAN SITI AIDA BINTI MD NOOR",
+    "cleanName": "SITI AIDA BINTI MD NOOR",
+    "title": "PUAN",
+    "role": "N1 PEMBANTU TADBIR (P/O)",
+    "staffId": "02773",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "mnsitiaida",
+    "email": "mnsitiaida@uthm.edu.my",
+    "phone": "07-950 8886",
+    "roomLocation": "PB-005B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02773.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mnsitiaida",
+    "specialities": [
+      "07- 950 8886"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mohd-kamarul-azhar-bin-rahmat",
+    "name": "ENCIK MOHD KAMARUL AZHAR BIN RAHMAT",
+    "cleanName": "MOHD KAMARUL AZHAR BIN RAHMAT",
+    "title": "ENCIK",
+    "role": "H1 PEMBANTU KHIDMAT AM",
+    "staffId": "01985",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Administrative Division",
+    "username": "azharr",
+    "email": "azharr@uthm.edu.my",
+    "phone": "07-950 8879",
+    "roomLocation": "PB-005B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01985.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azharr",
+    "specialities": [
+      "07- 950 8879"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-rahayu-binti-a-hamid",
+    "name": "Dr. RAHAYU BINTI A HAMID",
+    "cleanName": "RAHAYU BINTI A HAMID",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN, Ketua Jabatan Siswazah",
+    "staffId": "00474",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Postgraduate Studies",
+    "username": "rahayu",
+    "email": "rahayu@uthm.edu.my",
+    "phone": "07-950 8966",
+    "roomLocation": "PB-401-13",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00474.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rahayu",
+    "specialities": [
+      "Information Systems",
+      "Electronic Information Storage and Retrieval Services.",
+      "07- 950 8966",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Electronic Information Storage and Retrieval Services"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM10103",
+        "name": "Fundamentals Of Multimedia Computing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nureize-binti-arbaiy",
+    "name": "PROF. MADYA Dr. NUREIZE BINTI ARBAIY",
+    "cleanName": "NUREIZE BINTI ARBAIY",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA, Head of Department",
+    "staffId": "683323",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "nureize",
+    "email": "nureize@uthm.edu.my",
+    "phone": "07-950 8900",
+    "roomLocation": "PB-102-04",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/683323.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nureize",
+    "specialities": [
+      "Information Systems",
+      "Probabilistic Decision Making",
+      "Fuzzy Random Regression",
+      "Multi Criteria Decision Making & Time-Series Analysis.",
+      "07- 950 8900"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT34002",
+        "name": "Degree Project I",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-hamdi-irwan-bin-hamzah",
+    "name": "Dr. MOHD HAMDI IRWAN BIN HAMZAH",
+    "cleanName": "MOHD HAMDI IRWAN BIN HAMZAH",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN, Ketua Program Kejuruteraan Perisian",
+    "staffId": "589269",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "hamdi",
+    "email": "hamdi@uthm.edu.my",
+    "phone": "07-950 8948",
+    "roomLocation": "PB-301-13",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/589269.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hamdi",
+    "specialities": [
+      "Software Engineering",
+      "Software Quality.",
+      "07- 950 8948",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software Quality"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK10303",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-suziyanti-binti-marjudi",
+    "name": "Ts. Dr. SUZIYANTI BINTI MARJUDI",
+    "cleanName": "SUZIYANTI BINTI MARJUDI",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN, Ketua Program Teknologi Maklumat",
+    "staffId": "03368",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "suziyanti",
+    "email": "suziyanti@uthm.edu.my",
+    "phone": "07-950 8903",
+    "roomLocation": "PB-601-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03368.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/suziyanti",
+    "specialities": [
+      "Artificial Intelligence",
+      "Data Science",
+      "Big Data Analytics.",
+      "07- 950 8903",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT34503",
+        "name": "Data Science",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-zanes-bin-sahid",
+    "name": "Dr. MOHD ZANES BIN SAHID",
+    "cleanName": "MOHD ZANES BIN SAHID",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN, Laboratory Manager",
+    "staffId": "02406",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "zanes",
+    "email": "zanes@uthm.edu.my",
+    "phone": "07-950 8906",
+    "roomLocation": "PC-102-05",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02406.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zanes",
+    "specialities": [
+      "Software Engineering",
+      "Software Reliability & Testing.",
+      "07- 950 8906",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software Realiability and Testing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK20404",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rozaida-binti-ghazali",
+    "name": "PROF. Dr. ROZAIDA BINTI GHAZALI",
+    "cleanName": "ROZAIDA BINTI GHAZALI",
+    "title": "PROF. Dr.",
+    "role": "VK6 PROFESOR",
+    "staffId": "00470",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "rozaida",
+    "email": "rozaida@uthm.edu.my",
+    "phone": "07-950 8892",
+    "roomLocation": "PB-601-06",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00470.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rozaida",
+    "specialities": [
+      "Artificial Intelligence",
+      "Neural",
+      "Evolutionary and Fuzzy Computation",
+      "Neural Networks",
+      "Swarm Intelligence"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10704",
+        "name": "Research Methodology",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nazri-bin-mohd-nawi",
+    "name": "PROF. Dr. NAZRI BIN MOHD NAWI",
+    "cleanName": "NAZRI BIN MOHD NAWI",
+    "title": "PROF. Dr.",
+    "role": "VK7 PROFESOR",
+    "staffId": "00431",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "nazri",
+    "email": "nazri@uthm.edu.my",
+    "phone": "07-950 8951",
+    "roomLocation": "PB-301-09",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00431.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nazri",
+    "specialities": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Data Mining",
+      "Artificial Neural Network",
+      "Optimization."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT10103",
+        "name": "Software Engineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-abd-samad-bin-hasan-basari",
+    "name": "PROF. Dr. ABD SAMAD BIN HASAN BASARI",
+    "cleanName": "ABD SAMAD BIN HASAN BASARI",
+    "title": "PROF. Dr.",
+    "role": "VK7 PROFESOR",
+    "staffId": "03341",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "abdsamad",
+    "email": "abdsamad@uthm.edu.my",
+    "phone": "07-950 8927",
+    "roomLocation": "PB-501-06",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03341.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/abdsamad",
+    "specialities": [
+      "Artificial Intelligence",
+      "Predictive Analytics.",
+      "07- 950 8927",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Predictive Analytics"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIE20303",
+        "name": "Algorithm And Complexity",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT10103",
+        "name": "Software Engineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-khalid-bin-isa",
+    "name": "PROF. MADYA Ts. Dr. KHALID BIN ISA",
+    "cleanName": "KHALID BIN ISA",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00494",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "halid",
+    "email": "halid@uthm.edu.my",
+    "phone": "07-950 8293",
+    "roomLocation": "QA-402-14 (Blok Q)",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00494.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/halid",
+    "specialities": [
+      "Autonomous System",
+      "Autonomous Underwater Robotics/Vehicles",
+      "Computational Intelligence",
+      "Bio-inspired Engineering",
+      "Image Processing"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noor-azah-binti-samsudin",
+    "name": "PROF. MADYA Dr. NOOR AZAH BINTI SAMSUDIN",
+    "cleanName": "NOOR AZAH BINTI SAMSUDIN",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "01177",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "azah",
+    "email": "azah@uthm.edu.my",
+    "phone": "07-950 8955",
+    "roomLocation": "PB-302-06",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01177.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azah",
+    "specialities": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Classification",
+      "Feature Selection.",
+      "07- 950 8955"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT10703",
+        "name": "Data Structure And Algorithm",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noraini-binti-ibrahim",
+    "name": "PROF. MADYA Dr. NORAINI BINTI IBRAHIM",
+    "cleanName": "NORAINI BINTI IBRAHIM",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00475",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "noraini",
+    "email": "noraini@uthm.edu.my",
+    "phone": "07-950 8959",
+    "roomLocation": "PB-302-03",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00475.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/noraini",
+    "specialities": [
+      "Software Engineering",
+      "Software Realiability and Testing.",
+      "07- 950 8959",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software Realiability and Testing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK20703",
+        "name": "Professional Ethics And Occupational Safety",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIE30803",
+        "name": "Software Testing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-azizul-azhar-bin-ramli",
+    "name": "PROF. MADYA Ts. Dr. AZIZUL AZHAR BIN RAMLI",
+    "cleanName": "AZIZUL AZHAR BIN RAMLI",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00758",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "azizulr",
+    "email": "azizulr@uthm.edu.my",
+    "phone": "07-950 8965",
+    "roomLocation": "PB-701-11",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00758.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azizulr",
+    "specialities": [
+      "Artificial Intelligence",
+      "Soft Computing.",
+      "07- 950 8965",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Soft Computing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT10303",
+        "name": "Computer Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-yana-mazwin-binti-mohmad-hassim",
+    "name": "PROF. MADYA Dr. YANA MAZWIN BINTI MOHMAD HASSIM",
+    "cleanName": "YANA MAZWIN BINTI MOHMAD HASSIM",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00925",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "yana",
+    "email": "yana@uthm.edu.my",
+    "phone": "07-950 8931",
+    "roomLocation": "PB-207",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00925.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/yana",
+    "specialities": [
+      "Artificial Intelligence",
+      "Neural",
+      "Evolutionary and Fuzzy Computation",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT34403",
+        "name": "Deep Learning",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT20603",
+        "name": "Object Oriented Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-amin-bin-mohd-yunus",
+    "name": "PROF. MADYA Ts. Dr. MOHD AMIN BIN MOHD YUNUS",
+    "cleanName": "MOHD AMIN BIN MOHD YUNUS",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "02762",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "aminy",
+    "email": "aminy@uthm.edu.my",
+    "phone": "07-950 8936",
+    "roomLocation": "PB-601-03",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02762.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/aminy",
+    "specialities": [
+      "Information Systems",
+      "Search Engine.",
+      "07- 950 8936",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Search Engine"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10303",
+        "name": "Applied Data Visualization",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT31502",
+        "name": "Entrepreneurship, Creativity And Innovation",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-shuhaida-binti-ismail",
+    "name": "Ts. Dr. SHUHAIDA BINTI ISMAIL",
+    "cleanName": "SHUHAIDA BINTI ISMAIL",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02728",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "shuhaida",
+    "email": "shuhaida@uthm.edu.my",
+    "phone": "07-950 8946",
+    "roomLocation": "PB-501-03",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02728.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/shuhaida",
+    "specialities": [
+      "Artificial Intelligence",
+      "Machine Learning.",
+      "07- 950 8946",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Machine Learning"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20803",
+        "name": "Database System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT34703",
+        "name": "Visual Analytics",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mazidah-binti-mat-rejab",
+    "name": "Ts. Dr. MAZIDAH BINTI MAT REJAB",
+    "cleanName": "MAZIDAH BINTI MAT REJAB",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03408",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "mazidah",
+    "email": "mazidah@uthm.edu.my",
+    "phone": "07-950 8956",
+    "roomLocation": "PB-302-05",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03408.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mazidah",
+    "specialities": [
+      "Software Engineering",
+      "Software Specification",
+      "Requirement Engineering",
+      "Software Testing",
+      "Software Project Management"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIE30503",
+        "name": "Software Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31602",
+        "name": "Undergraduate Project I",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-shamsul-bin-mohamad",
+    "name": "Ts. Dr. SHAMSUL BIN MOHAMAD",
+    "cleanName": "SHAMSUL BIN MOHAMAD",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00620",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "shamsulm",
+    "email": "shamsulm@uthm.edu.my",
+    "phone": "07-950 8248",
+    "roomLocation": "QA-501-04 (Blok Q)",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00620.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/shamsulm",
+    "specialities": [
+      "Software Agents.",
+      "07- 950 8248",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software",
+      "Software Agents"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT21403",
+        "name": "Fundamentals Of Information Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohamad-aizi-bin-salamat",
+    "name": "Dr. MOHAMAD AIZI BIN SALAMAT",
+    "cleanName": "MOHAMAD AIZI BIN SALAMAT",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01363",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "aizi",
+    "email": "aizi@uthm.edu.my",
+    "phone": "07-950 9277",
+    "roomLocation": "PB-701-12",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01363.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/aizi",
+    "specialities": [
+      "Information Systems",
+      "Management Information System.",
+      "07- 950 9277",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Management Information System"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10203",
+        "name": "Ict Strategic Planning",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT30403",
+        "name": "Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nasarudin-bin-ismail",
+    "name": "Dr. NASARUDIN BIN ISMAIL",
+    "cleanName": "NASARUDIN BIN ISMAIL",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00755",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "nasar",
+    "email": "nasar@uthm.edu.my",
+    "phone": "07-950 8890",
+    "roomLocation": "PB-701-10",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00755.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nasar",
+    "specialities": [
+      "Information Systems",
+      "Management Information System",
+      "Underwater Sensor Network",
+      "Wireless Sensor Network.",
+      "07- 950 8890"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20303",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nur-ariffin-bin-mohd-zin",
+    "name": "Dr. NUR ARIFFIN BIN MOHD ZIN",
+    "cleanName": "NUR ARIFFIN BIN MOHD ZIN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02302",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "ariffin",
+    "email": "ariffin@uthm.edu.my",
+    "phone": "07-950 8947",
+    "roomLocation": "PB-701-18",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02302.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/ariffin",
+    "specialities": [
+      "Signal Processing",
+      "Pattern Recognition and Image Recognition",
+      "Biometric",
+      "Object Recognition and Tracking",
+      "Image Processing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC21203",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohamad-firdaus-bin-ab-aziz",
+    "name": "Dr. MOHAMAD FIRDAUS BIN AB. AZIZ",
+    "cleanName": "MOHAMAD FIRDAUS BIN AB. AZIZ",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02350",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "mdfirdaus",
+    "email": "mdfirdaus@uthm.edu.my",
+    "phone": "07-950 8905",
+    "roomLocation": "PB-501-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02350.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mdfirdaus",
+    "specialities": [
+      "Artificial Intelligence",
+      "Soft Computing.",
+      "07- 950 8905",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Soft Computing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT11003",
+        "name": "Discrete Structure",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rabatul-aduni-binti-sulaiman",
+    "name": "Dr. RABATUL ADUNI BINTI SULAIMAN",
+    "cleanName": "RABATUL ADUNI BINTI SULAIMAN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03366",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "aduni",
+    "email": "aduni@uthm.edu.my",
+    "phone": "07-950 8911",
+    "roomLocation": "PB-501-14",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03366.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rabatul",
+    "specialities": [
+      "Software",
+      "Software Engineering",
+      "Software Testing",
+      "Soft Computing",
+      "Database"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK11003",
+        "name": "Databases",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nurezayana-binti-zainal",
+    "name": "Dr. NUREZAYANA BINTI ZAINAL",
+    "cleanName": "NUREZAYANA BINTI ZAINAL",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03182",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "nurezayana",
+    "email": "nurezayana@uthm.edu.my",
+    "phone": "07-950 8931",
+    "roomLocation": "PB-207",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03182.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nurezayana",
+    "specialities": [
+      "Artificial Intelligence",
+      "Soft Computing",
+      "Optimization",
+      "Modelling",
+      "Swarm Intelligence Algorithms"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK10602",
+        "name": "Discrete Structures",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC10603",
+        "name": "Statistics",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-radiah-binti-mohamad",
+    "name": "Dr. RADIAH BINTI MOHAMAD",
+    "cleanName": "RADIAH BINTI MOHAMAD",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00373",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "radiah",
+    "email": "radiah@uthm.edu.my",
+    "phone": "07-950 8972",
+    "roomLocation": "PB-401-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00373.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/radiah",
+    "specialities": [
+      "Applied Mathematics.",
+      "07- 950 8972",
+      "MATHEMATICAL SCIENCES",
+      "Applied Mathematics",
+      "Other Applied Mathematics n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10103",
+        "name": "Discrete Structure",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT11603",
+        "name": "Statistics",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-siti-hajar-binti-arbain",
+    "name": "Dr. SITI HAJAR BINTI ARBAIN",
+    "cleanName": "SITI HAJAR BINTI ARBAIN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03586",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "sitihajara",
+    "email": "sitihajara@uthm.edu.my",
+    "phone": "07-950 8928",
+    "roomLocation": "PB-601-17",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03586.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sitihajara",
+    "specialities": [
+      "Applied Science and Technology",
+      "Software Effort Estimation",
+      "Hybrid Group Method Data Handling – Deep Learning",
+      "Taguchi Optimization.",
+      "07- 950 8928"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10303",
+        "name": "Algebra",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC10003",
+        "name": "Fundamentals Of Mathematics For Computer Science",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-abdullah-abdurahman-mohamed-ahmed",
+    "name": "Dr. ABDULLAH ABDURAHMAN MOHAMED AHMED",
+    "cleanName": "ABDULLAH ABDURAHMAN MOHAMED AHMED",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03605",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "abdullahm",
+    "email": "abdullahm@uthm.edu.my",
+    "phone": "07-950 8968",
+    "roomLocation": "PB-401-11",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03605.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/abdullahm",
+    "specialities": [
+      "Software Engineering",
+      "07- 950 8968",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Software Engineering n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT35103",
+        "name": "Cloud Computing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIK20103",
+        "name": "Computer Networks",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-suhaila-binti-mohd-yasin",
+    "name": "Dr. SUHAILA BINTI MOHD. YASIN",
+    "cleanName": "SUHAILA BINTI MOHD. YASIN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01855",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "ysuhaila",
+    "email": "ysuhaila@uthm.edu.my",
+    "phone": "07-950 8924",
+    "roomLocation": "PB-211",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01855.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/ysuhaila",
+    "specialities": [
+      "Software Engineering",
+      "Software Realiability and Testing",
+      "Software Testing",
+      "Software Modelling",
+      "Software Development."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK20803",
+        "name": "Creativity And Innovation",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIK30303",
+        "name": "Software Measurement",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nur-liyana-binti-sulaiman",
+    "name": "Dr. NUR LIYANA BINTI SULAIMAN",
+    "cleanName": "NUR LIYANA BINTI SULAIMAN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03566",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "nrliyana",
+    "email": "nrliyana@uthm.edu.my",
+    "phone": "07-950 8931",
+    "roomLocation": "PB-207",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03566.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nrliyana",
+    "specialities": [
+      "Software Engineering",
+      "Software Process Models",
+      "Agile Software Development",
+      "Software Process & Quality",
+      "Software Process Improvement."
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10503",
+        "name": "Business Process Reengineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIK20303",
+        "name": "Software Design",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-shahdatunnaim-binti-azmi",
+    "name": "Dr. SHAHDATUNNAIM BINTI AZMI",
+    "cleanName": "SHAHDATUNNAIM BINTI AZMI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03740",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "shahdatun",
+    "email": "shahdatun@uthm.edu.my",
+    "phone": "07-950 8922",
+    "roomLocation": "PB-501-11",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03740.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/shahdatun",
+    "specialities": [
+      "Information System",
+      "Management Information System",
+      "Gamification",
+      "Adoption of Information Technology",
+      "E-learning"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT30502",
+        "name": "Enterprise Resource Planning",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT21503",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norhamreeza-binti-abdul-hamid",
+    "name": "Dr. NORHAMREEZA BINTI ABDUL HAMID",
+    "cleanName": "NORHAMREEZA BINTI ABDUL HAMID",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03365",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "hamreeza",
+    "email": "hamreeza@uthm.edu.my",
+    "phone": "07-950 8933",
+    "roomLocation": "PB-202",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03365.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hamreeza",
+    "specialities": [
+      "Artificial Intelligence",
+      "Machine Learning.",
+      "07- 950 8933",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Machine Learning"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rozita-binti-abdul-jalil",
+    "name": "Dr. ROZITA BINTI ABDUL JALIL",
+    "cleanName": "ROZITA BINTI ABDUL JALIL",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03678",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "rozita",
+    "email": "rozita@uthm.edu.my",
+    "phone": "07-950 8935",
+    "roomLocation": "PB-601-13",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03678.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rozita",
+    "specialities": [
+      "Artificial Intelligence",
+      "Soft Computing",
+      "Education Technology",
+      "Data Science",
+      "Data Analytics"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20503",
+        "name": "Creativity And Innovation",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT33603",
+        "name": "Data Mining",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nor-amalina-binti-mohd-sabri",
+    "name": "Dr. NOR AMALINA BINTI MOHD SABRI",
+    "cleanName": "NOR AMALINA BINTI MOHD SABRI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03738",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "noramalina",
+    "email": "noramalina@uthm.edu.my",
+    "phone": "07-950 8923",
+    "roomLocation": "PB-213",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03738.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/noramalina",
+    "specialities": [
+      "Computation Theory and Mathematics",
+      "Simulation and Modeling.",
+      "07- 950 8923",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Simulation and Modeling"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT30303",
+        "name": "Decision Support System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-muhammad-nazim-bin-razali",
+    "name": "Dr. MUHAMMAD NAZIM BIN RAZALI",
+    "cleanName": "MUHAMMAD NAZIM BIN RAZALI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03796",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "mnazim",
+    "email": "mnazim@uthm.edu.my",
+    "phone": "07-950 8969",
+    "roomLocation": "PB-401-10",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03796.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mnazim",
+    "specialities": [
+      "Artificial Intelligence",
+      "Predictive Analytics.",
+      "07- 950 8969",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Predictive Analytics"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIE33103",
+        "name": "Dotnet Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIK30603",
+        "name": "Dotnet Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-ruhaya-binti-ab-aziz",
+    "name": "PUAN RUHAYA BINTI AB.AZIZ",
+    "cleanName": "RUHAYA BINTI AB.AZIZ",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00415",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "ruhaya",
+    "email": "ruhaya@uthm.edu.my",
+    "phone": "07-950 8954",
+    "roomLocation": "PB-302-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00415.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/ruhaya",
+    "specialities": [
+      "Software Engineering.",
+      "07- 950 8954",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software",
+      "Software Engineering"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK10103",
+        "name": "Principles Of Software Engineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIE20103",
+        "name": "Requirement Engineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norhanim-binti-selamat",
+    "name": "PUAN NORHANIM BINTI SELAMAT",
+    "cleanName": "NORHANIM BINTI SELAMAT",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00476",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "norhanim",
+    "email": "norhanim@uthm.edu.my",
+    "phone": "07-950 8957",
+    "roomLocation": "PB-302-01",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00476.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/norhanim",
+    "specialities": [
+      "Software Engineering",
+      "Requirement Engineering.",
+      "07- 950 8957",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK20303",
+        "name": "Software Design",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-hannani-binti-aman",
+    "name": "PUAN HANNANI BINTI AMAN",
+    "cleanName": "HANNANI BINTI AMAN",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00766",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "hanani",
+    "email": "hanani@uthm.edu.my",
+    "phone": "07-950 8925",
+    "roomLocation": "PB-210",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00766.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hanani",
+    "specialities": [
+      "Software Engineering",
+      "Reverse Engineering",
+      "Formal Specification",
+      "Software Testing",
+      "07- 950 8925"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20103",
+        "name": "System Analysis And Design",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rozlini-binti-mohamed",
+    "name": "PUAN ROZLINI BINTI MOHAMED",
+    "cleanName": "ROZLINI BINTI MOHAMED",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00702",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "rozlini",
+    "email": "rozlini@uthm.edu.my",
+    "phone": "07-950 8960",
+    "roomLocation": "PB-302-04",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00702.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rozlini",
+    "specialities": [
+      "Information Systems",
+      "Management Information System.",
+      "07- 950 8960",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Management Information System"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK10203",
+        "name": "Algorithms And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norlida-binti-hassan",
+    "name": "PUAN NORLIDA BINTI HASSAN",
+    "cleanName": "NORLIDA BINTI HASSAN",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01352",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "norlida",
+    "email": "norlida@uthm.edu.my",
+    "phone": "07-950 8930",
+    "roomLocation": "PB-208",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01352.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/norlida",
+    "specialities": [
+      "Artificial Intelligence",
+      "Computational Intelligence",
+      "Neuro Fuzzy",
+      "Neural Network",
+      "Fuzzy Logic & Machine Learning."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20903",
+        "name": "Artificial Intelligence",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-munirah-binti-mohd-yusof",
+    "name": "PUAN MUNIRAH BINTI MOHD YUSOF",
+    "cleanName": "MUNIRAH BINTI MOHD YUSOF",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "427264",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "munirah",
+    "email": "munirah@uthm.edu.my",
+    "phone": "07-950 8958",
+    "roomLocation": "PB-302-02",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/427264.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/munirah",
+    "specialities": [
+      "Information Systems",
+      "Expert System",
+      "Software Engineering.",
+      "07- 950 8958",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-zaki-bin-mohd-salikon",
+    "name": "ENCIK MOHD ZAKI BIN MOHD SALIKON",
+    "cleanName": "MOHD ZAKI BIN MOHD SALIKON",
+    "title": "ENCIK",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00756",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "mdzaki",
+    "email": "mdzaki@uthm.edu.my",
+    "phone": "07-950 8891",
+    "roomLocation": "PB-701-09",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00756.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mdzaki",
+    "specialities": [
+      "Artificial Intelligence",
+      "Intelligent System.",
+      "07- 950 8891",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Artificial Intelligence n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT30603",
+        "name": "Customer Relationship Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT33803",
+        "name": "Java Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-haziq-asyraff-bin-razali",
+    "name": "ENCIK MOHD HAZIQ ASYRAFF BIN RAZALI",
+    "cleanName": "MOHD HAZIQ ASYRAFF BIN RAZALI",
+    "title": "ENCIK",
+    "role": "DS11 PENSYARAH",
+    "staffId": "03822",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "haziqr",
+    "email": "haziqr@uthm.edu.my",
+    "phone": "07-950 8898",
+    "roomLocation": "PB-501-05",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03822.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/haziqr",
+    "specialities": [
+      "Software Engineering",
+      "Software Realiability and Testing.",
+      "07- 950 8898",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Software Realiability and Testing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIK31103",
+        "name": "Mobile Application Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT34103",
+        "name": "Mobile Applications Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-muhammad-shukri-bin-che-lah",
+    "name": "ENCIK MUHAMMAD SHUKRI BIN CHE LAH",
+    "cleanName": "MUHAMMAD SHUKRI BIN CHE LAH",
+    "title": "ENCIK",
+    "role": "DS11 PENSYARAH",
+    "staffId": "03732",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "mdshukri",
+    "email": "mdshukri@uthm.edu.my",
+    "phone": "07-950 8929",
+    "roomLocation": "PB-209",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03732.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mdshukri",
+    "specialities": [
+      "Software Engineering",
+      "Component Based Software Development.",
+      "07- 950 8929",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Component Based Software Development"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT20403",
+        "name": "Operating System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-siti-haslinda-binti-mukhtar",
+    "name": "CIK SITI HASLINDA BINTI MUKHTAR",
+    "cleanName": "SITI HASLINDA BINTI MUKHTAR",
+    "title": "CIK",
+    "role": "DS11 PENSYARAH",
+    "staffId": "03902",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Software Engineering",
+    "username": "sthaslinda",
+    "email": "sthaslinda@uthm.edu.my",
+    "phone": "07-950 7241",
+    "roomLocation": "PB-301-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03902.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sthaslinda",
+    "specialities": [
+      "Computer-Based Teaching and Learning",
+      "Software Engineering.",
+      "EDUCATION"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT21303",
+        "name": "Human-Computer Interaction",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIE10103",
+        "name": "Software Engineering Principles",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nurul-aswa-binti-omar",
+    "name": "Dr. NURUL ASWA BINTI OMAR",
+    "cleanName": "NURUL ASWA BINTI OMAR",
+    "title": "Dr.",
+    "role": "Head of Department, Department of Information Security & Web Technology",
+    "staffId": "02344",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "nurulaswa",
+    "email": "nurulaswa@uthm.edu.my",
+    "phone": "07-950 8899",
+    "roomLocation": "PB-102-01",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02344.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nurulaswa",
+    "specialities": [
+      "Information Systems.",
+      "07- 950 8899",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Information Systems",
+      "Other Information Systems n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC20903",
+        "name": "Object-Oriented Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nordiana-binti-rahim",
+    "name": "Dr. NORDIANA BINTI RAHIM",
+    "cleanName": "NORDIANA BINTI RAHIM",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN, Ketua Program Keselamatan Maklumat",
+    "staffId": "02346",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "nordiana",
+    "email": "nordiana@uthm.edu.my",
+    "phone": "07-950 8942",
+    "roomLocation": "PB-501-12",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02346.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nordiana",
+    "specialities": [
+      "Security System",
+      "Computer Forensic",
+      "Social Media Forensics",
+      "Image Processing and Computer Vision.",
+      "07- 950 8942"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC11203",
+        "name": "Digital Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIS10103",
+        "name": "Information Security Fundamentals",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-hanayanti-binti-hafit",
+    "name": "PUAN HANAYANTI BINTI HAFIT",
+    "cleanName": "HANAYANTI BINTI HAFIT",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN, Ketua Program Teknologi Web",
+    "staffId": "00901",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "hana",
+    "email": "hana@uthm.edu.my",
+    "phone": "07-950 8896",
+    "roomLocation": "PB-601-16",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00901.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hana",
+    "specialities": [
+      "Emergent Information Technology",
+      "Human Computer Interaction (HCI).",
+      "07- 950 8896",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Human Computer Interaction (HCI)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM30503",
+        "name": "Human Computer Interaction",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC22003",
+        "name": "Human-Computer Interaction",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-hairulnizam-bin-mahdin",
+    "name": "PROF. Ts. Dr. HAIRULNIZAM BIN MAHDIN",
+    "cleanName": "HAIRULNIZAM BIN MAHDIN",
+    "title": "PROF. Ts. Dr.",
+    "role": "VK7 PROFESOR",
+    "staffId": "01302",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "hairuln",
+    "email": "hairuln@uthm.edu.my",
+    "phone": "07-950 8932",
+    "roomLocation": "PB-206",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01302.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hairuln",
+    "specialities": [
+      "Data Management.",
+      "07- 950 8932",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Data Management",
+      "Other Data Management n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10603",
+        "name": "Digital Transformation",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT21202",
+        "name": "Professional Ethics And Occupational Safety",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "KIT11103",
+        "name": "Research Methodology",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "PIT11103",
+        "name": "Research Methodology",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIW30503",
+        "name": "Web Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-kamaruddin-malik-bin-mohamad",
+    "name": "PROF. MADYA Dr. KAMARUDDIN MALIK BIN MOHAMAD",
+    "cleanName": "KAMARUDDIN MALIK BIN MOHAMAD",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "01318",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "malik",
+    "email": "malik@uthm.edu.my",
+    "phone": "07-950 8943",
+    "roomLocation": "PB-501-16",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01318.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/malik",
+    "specialities": [
+      "Information",
+      "Computer and Communication Technology",
+      "File Carving (Digital Forensics)",
+      "Secure Data Wiping",
+      "DDoS Detection"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS33303",
+        "name": "Critical Infrastructure Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-isredza-rahmi-binti-a-hamid",
+    "name": "PROF. MADYA Ts. Dr. ISREDZA RAHMI BINTI A HAMID",
+    "cleanName": "ISREDZA RAHMI BINTI A HAMID",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00774",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "rahmi",
+    "email": "rahmi@uthm.edu.my",
+    "phone": "07-950 8919",
+    "roomLocation": "PB-401-18",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00774.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rahmi",
+    "specialities": [
+      "Security System",
+      "Malware",
+      "Worms and Viruses.",
+      "07- 950 8919",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC20803",
+        "name": "Operating System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31602",
+        "name": "Undergraduate Project I",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nayef-abdulwahab-mohammed-alduais",
+    "name": "Ts. Dr. NAYEF ABDULWAHAB MOHAMMED ALDUAIS",
+    "cleanName": "NAYEF ABDULWAHAB MOHAMMED ALDUAIS",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03227",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "nayef",
+    "email": "nayef@uthm.edu.my",
+    "phone": "07-950 8934",
+    "roomLocation": "PB-203",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03227.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nayef",
+    "specialities": [
+      "Computer Engineering",
+      "Internet of Things",
+      "Wireless Sensor Networks.",
+      "07- 950 8934",
+      "ENGINEERING AND TECHNOLOGY"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW33803",
+        "name": "Internet Of Things (Iot",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC20803",
+        "name": "Operating System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nurul-hidayah-binti-ab-rahman",
+    "name": "Ts. Dr. NURUL HIDAYAH BINTI AB RAHMAN",
+    "cleanName": "NURUL HIDAYAH BINTI AB RAHMAN",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02479",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "hidayahar",
+    "email": "hidayahar@uthm.edu.my",
+    "phone": "07-950 8961",
+    "roomLocation": "PB-501-19",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02479.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hidayahar",
+    "specialities": [
+      "Security System",
+      "Computer Forensic",
+      "Digital Forensics & Incident Response",
+      "Information System Security Management",
+      "Usability Security."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS20503",
+        "name": "Software Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-deden-witarsyah",
+    "name": "Ts. Dr. DEDEN WITARSYAH",
+    "cleanName": "DEDEN WITARSYAH",
+    "title": "Ts. Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03741",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "deden",
+    "email": "deden@uthm.edu.my",
+    "phone": "07-950 8889",
+    "roomLocation": "PB-701-15",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03741.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/deden",
+    "specialities": [
+      "Data Management",
+      "Open Data and Open Science.",
+      "07- 950 8889",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Data Management n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10503",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31802",
+        "name": "Cyberpreneurship",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31903",
+        "name": "Technopreneurship",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nurul-azma-binti-abdullah",
+    "name": "Dr. NURUL AZMA BINTI ABDULLAH",
+    "cleanName": "NURUL AZMA BINTI ABDULLAH",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00665",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "azma",
+    "email": "azma@uthm.edu.my",
+    "phone": "07-950 8926",
+    "roomLocation": "PB-201-09",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00665.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azma",
+    "specialities": [
+      "Applied Science and Technology",
+      "Digital Forensics",
+      "File Carving.",
+      "07- 950 8926",
+      "APPLIED SCIENCES, ENGINEERING AND TECHNOLOGIES"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS30702",
+        "name": "Information Security Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIS30703",
+        "name": "Information Security Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-firkhan-ali-bin-hamid-ali",
+    "name": "Dr. FIRKHAN ALI BIN HAMID ALI",
+    "cleanName": "FIRKHAN ALI BIN HAMID ALI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00727",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "firkhan",
+    "email": "firkhan@uthm.edu.my",
+    "phone": "07-950 8963",
+    "roomLocation": "PB-601-12",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00727.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/firkhan",
+    "specialities": [
+      "ICT Infrastructure and Framework",
+      "Web Technology",
+      "Computer Network",
+      "Cybersecurity",
+      "Intelligent System"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10503",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT20703",
+        "name": "Network And Data Communication",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-shamsul-kamal-bin-ahmad-khalid",
+    "name": "Dr. SHAMSUL KAMAL BIN AHMAD KHALID",
+    "cleanName": "SHAMSUL KAMAL BIN AHMAD KHALID",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01178",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "shamsulk",
+    "email": "shamsulk@uthm.edu.my",
+    "phone": "07-950 8901",
+    "roomLocation": "PB-102-03",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01178.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/shamsulk",
+    "specialities": [
+      "Security Services (Including Digital Forensic",
+      "Steganography",
+      "Network Security",
+      "Public Key Infrastucture and Biometrics).",
+      "07- 950 8901"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS30903",
+        "name": "Communication And Network Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "CIC10319",
+        "name": "Dissertation 2",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noor-zuraidin-bin-mohd-safar",
+    "name": "Dr. NOOR ZURAIDIN BIN MOHD SAFAR",
+    "cleanName": "NOOR ZURAIDIN BIN MOHD SAFAR",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03027",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "zuraidin",
+    "email": "zuraidin@uthm.edu.my",
+    "phone": "07-950 8908",
+    "roomLocation": "PC-102-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03027.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zuraidin",
+    "specialities": [
+      "Artificial Intelligence",
+      "Neural",
+      "Evolutionary and Fuzzy Computation",
+      "Environmental Data Analysis and Management",
+      "Computational Intelligent."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW33003",
+        "name": "Content Management System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-sofia-najwa-binti-ramli",
+    "name": "Dr. SOFIA NAJWA BINTI RAMLI",
+    "cleanName": "SOFIA NAJWA BINTI RAMLI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02951",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "sofianajwa",
+    "email": "sofianajwa@uthm.edu.my",
+    "phone": "07-950 8971",
+    "roomLocation": "PB-401-14",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02951.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sofianajwa",
+    "specialities": [
+      "Security System",
+      "Authentication System.",
+      "07- 950 8971",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Authentication System"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10103",
+        "name": "Discrete Structure",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "PIT10090",
+        "name": "Research",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nor-bakiah-binti-abd-warif",
+    "name": "Dr. NOR BAKIAH BINTI ABD WARIF",
+    "cleanName": "NOR BAKIAH BINTI ABD WARIF",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03184",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "norbakiah",
+    "email": "norbakiah@uthm.edu.my",
+    "phone": "07-950 8952",
+    "roomLocation": "PB-301-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03184.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/norbakiah",
+    "specialities": [
+      "Security Services (Including Digital Forensic",
+      "Steganography",
+      "Network Security",
+      "Public Key Infrastucture and Biometrics)",
+      "Image Processing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS33103",
+        "name": "Corporate Security Engineering",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC41812",
+        "name": "Industrial Training",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rosmamalmi-binti-mat-nawi",
+    "name": "Dr. ROSMAMALMI BINTI MAT NAWI",
+    "cleanName": "ROSMAMALMI BINTI MAT NAWI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03423",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "rosmamalmi",
+    "email": "rosmamalmi@uthm.edu.my",
+    "phone": "07-950 8877",
+    "roomLocation": "PB-501-13",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03423.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rosmamalmi",
+    "specialities": [
+      "Web Technology",
+      "Semantic Web",
+      "Linked Open Data",
+      "Web of Data",
+      "Recommender System"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIT40112",
+        "name": "Industrial Training",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIW10203",
+        "name": "Web Application",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC21203",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-suhaimi-bin-abd-ishak",
+    "name": "Dr. SUHAIMI BIN ABD ISHAK",
+    "cleanName": "SUHAIMI BIN ABD ISHAK",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02446",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "suhaimiabd",
+    "email": "suhaimiabd@uthm.edu.my",
+    "phone": "07-950 8964",
+    "roomLocation": "PB-601-19",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02446.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/suhaimiabd",
+    "specialities": [
+      "Web Technology",
+      "Embedded Systems",
+      "Pervasive Computing",
+      "Internet of Things.",
+      "07- 950 8964"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10503",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "MIC11503",
+        "name": "Enterprise Iot",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIW33403",
+        "name": "Pervasive Computing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norfaradilla-binti-wahid",
+    "name": "Dr. NORFARADILLA BINTI WAHID",
+    "cleanName": "NORFARADILLA BINTI WAHID",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01732",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "faradila",
+    "email": "faradila@uthm.edu.my",
+    "phone": "07-950 8904",
+    "roomLocation": "PB-601-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01732.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/faradila",
+    "specialities": [
+      "Web Technology",
+      "XML Technology",
+      "Semantic Web",
+      "Internet of Things.",
+      "07- 950 8904"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC31704",
+        "name": "Degree Project Ii",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIT34204",
+        "name": "Degree Project Ii",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC20904",
+        "name": "Object- Oriented Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC20903",
+        "name": "Object-Oriented Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-cik-feresa-binti-mohd-foozy",
+    "name": "Dr. CIK FERESA BINTI MOHD FOOZY",
+    "cleanName": "CIK FERESA BINTI MOHD FOOZY",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "feresa",
+    "email": "feresa@uthm.edu.my",
+    "phone": "07-950 8897",
+    "roomLocation": "PB-501-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01765.png",
+    "communityUrl": "https://community.uthm.edu.my/feresa",
+    "specialities": [
+      "Security System",
+      "Cybersecurity/Cloud/IoT Attack Detection",
+      "Cybersecurity Social Network Gamification Training",
+      "Machine Learning",
+      "Classification"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC21203",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noryusliza-binti-abdullah",
+    "name": "Dr. NORYUSLIZA BINTI ABDULLAH",
+    "cleanName": "NORYUSLIZA BINTI ABDULLAH",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00718",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "yusliza",
+    "email": "yusliza@uthm.edu.my",
+    "phone": "07-950 8940",
+    "roomLocation": "PB-102-01",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00718.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/yusliza",
+    "specialities": [
+      "Information Systems",
+      "Decision Support System",
+      "Internet of Things",
+      "Semantic Web",
+      "Ontology"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW10103",
+        "name": "Fundamentals Of Web Technology",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31602",
+        "name": "Undergraduate Project I",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nur-ziadah-binti-harun",
+    "name": "Dr. NUR ZIADAH BINTI HARUN",
+    "cleanName": "NUR ZIADAH BINTI HARUN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03334",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "nurziadah",
+    "email": "nurziadah@uthm.edu.my",
+    "phone": "07-950 8949",
+    "roomLocation": "PB-301-12",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03334.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nurziadah",
+    "specialities": [
+      "Security System",
+      "Cryptography",
+      "Quantum Key Distribution",
+      "Quantum Communication",
+      "Authentication."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10203",
+        "name": "Algorithm And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC21102",
+        "name": "Professional Ethics And Occupational",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-siti-fadzlun-binti-md-salleh",
+    "name": "Dr. SITI FADZLUN BINTI MD SALLEH",
+    "cleanName": "SITI FADZLUN BINTI MD SALLEH",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03671",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "sfadzlun",
+    "email": "sfadzlun@uthm.edu.my",
+    "phone": "07-950 8921",
+    "roomLocation": "PB-501-04",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03671.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sfadzlun",
+    "specialities": [
+      "Security Services (Including Digital Forensic",
+      "Steganography",
+      "Network Security",
+      "Public Key Infrastucture and Biometrics)",
+      "Image Processing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10503",
+        "name": "Computer Architecture",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "MIC10403",
+        "name": "Information Security Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-tay-xin-hui",
+    "name": "Dr. TAY XIN HUI",
+    "cleanName": "TAY XIN HUI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03867",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "xhtay",
+    "email": "xhtay@uthm.edu.my",
+    "phone": "07-950 9581",
+    "roomLocation": "PB-209",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03867.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/xhtay",
+    "specialities": [
+      "Bioinformatics Tools",
+      "Platforms and Technologies",
+      "Data Mining for Life Sciences.",
+      "07- 950 9581",
+      "BIOINFORMATICS"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW10103",
+        "name": "Fundamentals Of Web Technology",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC20803",
+        "name": "Operating System",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nur-afiqah-binti-sahadun",
+    "name": "Dr. NUR AFIQAH BINTI SAHADUN",
+    "cleanName": "NUR AFIQAH BINTI SAHADUN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03731",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "nurafiqah",
+    "email": "nurafiqah@uthm.edu.my",
+    "phone": "07-950 8962",
+    "roomLocation": "PB-601-11",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03731.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/nurafiqah",
+    "specialities": [
+      "Data Management",
+      "Forensic Computing",
+      "Bioinformatics",
+      "Feature Selection",
+      "Artificial Intelligence."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIW10203",
+        "name": "Web Application",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-khairul-amin-bin-mohamad-sukri",
+    "name": "ENCIK KHAIRUL AMIN BIN MOHAMAD SUKRI",
+    "cleanName": "KHAIRUL AMIN BIN MOHAMAD SUKRI",
+    "title": "ENCIK",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00786",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "khairulm",
+    "email": "khairulm@uthm.edu.my",
+    "phone": "07-950 8941",
+    "roomLocation": "PB-501-20",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00786.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/khairulm",
+    "specialities": [
+      "Security System",
+      "Intrusion Detection System",
+      "Information Security",
+      "Computer and Mobile Security",
+      "Network Intrusion Detection System."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIS20303",
+        "name": "Web Security",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-rozanawati-binti-darman",
+    "name": "PUAN ROZANAWATI BINTI DARMAN",
+    "cleanName": "ROZANAWATI BINTI DARMAN",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00936",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "zana",
+    "email": "zana@uthm.edu.my",
+    "phone": "07-950 8939",
+    "roomLocation": "PB-601-20",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00936.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zana",
+    "specialities": [
+      "Emergent Information Technology",
+      "Pervasive Computing",
+      "Internet of Things",
+      "Agent Technology.",
+      "07- 950 8939"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10203",
+        "name": "Algorithm And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC21102",
+        "name": "Professional Ethics And Occupational",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-ahmad-tajudin-bin-baharin",
+    "name": "Ts. AHMAD TAJUDIN BIN BAHARIN",
+    "cleanName": "AHMAD TAJUDIN BIN BAHARIN",
+    "title": "Ts.",
+    "role": "DS11 PENSYARAH",
+    "staffId": "03742",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "tajudin",
+    "email": "tajudin@uthm.edu.my",
+    "phone": "07-950 8938",
+    "roomLocation": "PB-701-13",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03742.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/tajudin",
+    "specialities": [
+      "Agricultural Information System (AIS)",
+      "E-Learning",
+      "Web Learning",
+      "Web Development.",
+      "07- 950 8938"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC21203",
+        "name": "Web Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-zarina-binti-tukiran",
+    "name": "PUAN ZARINA BINTI TUKIRAN",
+    "cleanName": "ZARINA BINTI TUKIRAN",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00544",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Information Security & Web Technology",
+    "username": "zarin",
+    "email": "zarin@uthm.edu.my",
+    "phone": "07-950 8300",
+    "roomLocation": "QA-201-05 (Blok Q)",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00544.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zarin",
+    "specialities": [
+      "Engineering Science and Technology",
+      "Embedded Computing System",
+      "Internet of Things",
+      "High Performance Computing.",
+      "07- 950 8300"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10203",
+        "name": "Algorithm And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-mohd-norasri-bin-ismail",
+    "name": "PROF. MADYA Ts. Dr. MOHD NORASRI BIN ISMAIL",
+    "cleanName": "MOHD NORASRI BIN ISMAIL",
+    "title": "PROF. MADYA Ts. Dr.",
+    "role": "DS14 PROFESOR MADYA, Head of Department",
+    "staffId": "01153",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "norasri",
+    "email": "norasri@uthm.edu.my",
+    "phone": "07-950 9007",
+    "roomLocation": "PB-102-02",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01153.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/norasri",
+    "specialities": [
+      "Multimedia System and Application",
+      "Virtual Reality",
+      "Augmented Reality",
+      "Extended Reality",
+      "User Experience"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC10103",
+        "name": "Information Technology Governance",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norhanifah-binti-murli",
+    "name": "Dr. NORHANIFAH BINTI MURLI",
+    "cleanName": "NORHANIFAH BINTI MURLI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN, Ketua Program Pengkomputeran Multimedia",
+    "staffId": "00783",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "hanifah",
+    "email": "hanifah@uthm.edu.my",
+    "phone": "07-950 8907",
+    "roomLocation": "PB-102-02",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00783.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/hanifah",
+    "specialities": [
+      "Multimedia",
+      "Digital Image Processing System",
+      "Data Mining & Knowledge Engineering",
+      "Spiking Neural Networks",
+      "fMRI Brain Image Processing."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM30703",
+        "name": "Multimedia Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noorhaniza-binti-wahid",
+    "name": "PROF. MADYA Dr. NOORHANIZA BINTI WAHID",
+    "cleanName": "NOORHANIZA BINTI WAHID",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "nhaniza",
+    "email": "nhaniza@uthm.edu.my",
+    "phone": "07-950 8910",
+    "roomLocation": "PB-402-22",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00466.JPG",
+    "communityUrl": "https://community.uthm.edu.my/nhaniza",
+    "specialities": [
+      "Soft Computing",
+      "Metaheuristic Algorithms",
+      "Multimedia Application.",
+      "07- 950 8910",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC22003",
+        "name": "Human-Computer Interaction",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-norhalina-binti-senan",
+    "name": "PROF. MADYA Dr. NORHALINA BINTI SENAN",
+    "cleanName": "NORHALINA BINTI SENAN",
+    "title": "PROF. MADYA Dr.",
+    "role": "DS14 PROFESOR MADYA",
+    "staffId": "00477",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "halina",
+    "email": "halina@uthm.edu.my",
+    "phone": "07-950 8895",
+    "roomLocation": "PB-401-21",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00477.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/halina",
+    "specialities": [
+      "Human Computer Interaction (HCI)",
+      "Data Mining",
+      "Rough Set",
+      "Feature Selection",
+      "Signal Processing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM30702",
+        "name": "Multimedia Project Management",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC31602",
+        "name": "Undergraduate Project I",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-ezak-fadzrin-bin-ahmad-shaubari",
+    "name": "Dr. EZAK FADZRIN BIN AHMAD SHAUBARI",
+    "cleanName": "EZAK FADZRIN BIN AHMAD SHAUBARI",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03177",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "ezak",
+    "email": "ezak@uthm.edu.my",
+    "phone": "07-950 8878",
+    "roomLocation": "PB-501-18",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03177.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/ezak",
+    "specialities": [
+      "Multimedia",
+      "Digital Image Processing System",
+      "Computer Vision",
+      "Medical Imaging",
+      "Human Physiology"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC31802",
+        "name": "Cyberpreneurship",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC21102",
+        "name": "Professional Ethics And Occupational",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-noraziahtulhidayu-binti-kamarudin",
+    "name": "Dr. NORAZIAHTULHIDAYU BINTI KAMARUDIN",
+    "cleanName": "NORAZIAHTULHIDAYU BINTI KAMARUDIN",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "03339",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "noraziah",
+    "email": "noraziah@uthm.edu.my",
+    "phone": "07-950 8953",
+    "roomLocation": "PB-302-08",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03339.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/noraziah",
+    "specialities": [
+      "Software",
+      "Embedded Systems",
+      "Internet of Things",
+      "Speech Processing",
+      "Quranic Speech Processing"
+    ],
+    "currentSubjects": [
+      {
+        "code": "MIC11303",
+        "name": "Big Data Processing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC32203",
+        "name": "Mobile Application Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-che-samihah-binti-che-dalim",
+    "name": "Dr. CHE SAMIHAH BINTI CHE DALIM",
+    "cleanName": "CHE SAMIHAH BINTI CHE DALIM",
+    "title": "Dr.",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "02445",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "samihah",
+    "email": "samihah@uthm.edu.my",
+    "phone": "07-950 8973",
+    "roomLocation": "PB-401-24",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/02445.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/samihah",
+    "specialities": [
+      "Multimedia",
+      "Interface Design",
+      "Augmented Reality",
+      "User Experience",
+      "Human-Computer Interaction"
+    ],
+    "currentSubjects": [
+      {
+        "code": "KIT10040",
+        "name": "Research",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIM30803",
+        "name": "Virtual Reality",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-yab-li-yu",
+    "name": "Dr. YAB LI YU",
+    "cleanName": "YAB LI YU",
+    "title": "Dr.",
+    "role": "DS11 PENSYARAH",
+    "staffId": "",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "yabliyu",
+    "email": "yabliyu@uthm.edu.my",
+    "phone": "07-950 7157",
+    "roomLocation": "PB-601-14",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03870.jpg",
+    "communityUrl": "https://community.uthm.edu.my/yabliyu",
+    "specialities": [
+      "Data Mining",
+      "Feature Selection",
+      "Game Development.",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Information, Computer and Communication Technology (ICT) n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10403",
+        "name": "Data Structure",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC20903",
+        "name": "Object-Oriented Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-azizan-bin-ismail",
+    "name": "ENCIK AZIZAN BIN ISMAIL",
+    "cleanName": "AZIZAN BIN ISMAIL",
+    "title": "ENCIK",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00685",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "azizanis",
+    "email": "azizanis@uthm.edu.my",
+    "phone": "07-950 8920",
+    "roomLocation": "PB-401-19",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00685.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azizanis",
+    "specialities": [
+      "Information",
+      "Computer and Communication Technology (ICT).",
+      "07- 950 8920",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Other Information, Computer and Communication Technology (ICT) n.e.c."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10203",
+        "name": "Algorithm And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-muhammad-fakri-bin-othman",
+    "name": "ENCIK MUHAMMAD FAKRI BIN OTHMAN",
+    "cleanName": "MUHAMMAD FAKRI BIN OTHMAN",
+    "title": "ENCIK",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00929",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "fakri",
+    "email": "fakri@uthm.edu.my",
+    "phone": "07-950 8974",
+    "roomLocation": "PB-401-23",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00929.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/fakri",
+    "specialities": [
+      "Computer Animation and Digital Arts (Including Edutainment",
+      "Information Processing Services",
+      "Integrated and Expert System for Designing",
+      "Multimedia Content",
+      "Virtual Reality and Virtual Manufacturing)"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM10303",
+        "name": "3d Modelling",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIM33103",
+        "name": "Games Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-suriawati-binti-suparjoh",
+    "name": "PUAN SURIAWATI BINTI SUPARJOH",
+    "cleanName": "SURIAWATI BINTI SUPARJOH",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "00942",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "suriati",
+    "email": "suriati@uthm.edu.my",
+    "phone": "07-950 8912",
+    "roomLocation": "PB-401-16",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00942.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/suriati",
+    "specialities": [
+      "Multimedia",
+      "Edutainment (Including Merging Education).",
+      "07- 950 8912",
+      "INFORMATION, COMPUTER AND COMMUNICATIONS TECHNOLOGY (ICT)",
+      "Edutainment (Including Merging Education"
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIM10103",
+        "name": "Fundamentals Of Multimedia Computing",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIM30603",
+        "name": "Mobile Application Development",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-nor-aisah-binti-sudin",
+    "name": "PUAN NOR’AISAH BINTI SUDIN",
+    "cleanName": "NOR’AISAH BINTI SUDIN",
+    "title": "PUAN",
+    "role": "DS13 PENSYARAH KANAN",
+    "staffId": "01141",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "Department of Multimedia Computing",
+    "username": "noraisah",
+    "email": "noraisah@uthm.edu.my",
+    "phone": "07-950 8250",
+    "roomLocation": "QA-202-11 (Blok Q)",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01141.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/noraisah",
+    "specialities": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Artificial Neural Network",
+      "Databases",
+      "Web Development."
+    ],
+    "currentSubjects": [
+      {
+        "code": "BIC10203",
+        "name": "Algorithm And Programming",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      },
+      {
+        "code": "BIC21102",
+        "name": "Professional Ethics And Occupational",
+        "session": "Session 20262027 Semester 1",
+        "year": "2026",
+        "isCurrentSemester": true
+      }
+    ],
+    "isAvailableFYP": true
+  },
+  {
+    "id": "fsktm-azizah-binti-ali",
+    "name": "PUAN AZIZAH BINTI ALI",
+    "cleanName": "AZIZAH BINTI ALI",
+    "title": "PUAN",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "00279",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "azizah",
+    "email": "azizah@uthm.edu.my",
+    "phone": "07-950 8918",
+    "roomLocation": "PC-102-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00279.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/azizah",
+    "specialities": [
+      "07- 950 8918"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-faizannizam-bin-shahbudin",
+    "name": "ENCIK FAIZANNIZAM BIN SHAHBUDIN",
+    "cleanName": "FAIZANNIZAM BIN SHAHBUDIN",
+    "title": "ENCIK",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "00594",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "faizan",
+    "email": "faizan@uthm.edu.my",
+    "phone": "07-950 8916",
+    "roomLocation": "PC-102B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00594.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/faizan",
+    "specialities": [
+      "07- 950 8916"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-rafidah-binti-abu-bakar",
+    "name": "PUAN RAFIDAH BINTI ABU BAKAR",
+    "cleanName": "RAFIDAH BINTI ABU BAKAR",
+    "title": "PUAN",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "00600",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "rafidah",
+    "email": "rafidah@uthm.edu.my",
+    "phone": "07-950 8909",
+    "roomLocation": "PC-102-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00600.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/rafidah",
+    "specialities": [
+      "07- 950 8909"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mohammad-hafiz-bin-mt-saidun",
+    "name": "ENCIK MOHAMMAD HAFIZ BIN MT SAIDUN",
+    "cleanName": "MOHAMMAD HAFIZ BIN MT SAIDUN",
+    "title": "ENCIK",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "01112",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "mhafiz",
+    "email": "mhafiz@uthm.edu.my",
+    "phone": "07-950 8915",
+    "roomLocation": "PC-102B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01112.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/mhafiz",
+    "specialities": [
+      "07- 950 8915"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mohd-al-hafiz-bin-nordin",
+    "name": "ENCIK MOHD AL HAFIZ BIN NORDIN",
+    "cleanName": "MOHD AL HAFIZ BIN NORDIN",
+    "title": "ENCIK",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "01309",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "alhafiz",
+    "email": "alhafiz@uthm.edu.my",
+    "phone": "07-950 8913",
+    "roomLocation": "PC-102B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/01309.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/alhafiz",
+    "specialities": [
+      "07- 950 8913"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-zuraidah-binti-bachok",
+    "name": "PUAN ZURAIDAH BINTI BACHOK",
+    "cleanName": "ZURAIDAH BINTI BACHOK",
+    "title": "PUAN",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "00801",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "zura",
+    "email": "zura@uthm.edu.my",
+    "phone": "07-950 8908",
+    "roomLocation": "PC-102-07",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00801.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/zura",
+    "specialities": [
+      "07- 950 8908"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-sahidan-bin-paran",
+    "name": "ENCIK SAHIDAN BIN PARAN",
+    "cleanName": "SAHIDAN BIN PARAN",
+    "title": "ENCIK",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "00805",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "sahidan",
+    "email": "sahidan@uthm.edu.my",
+    "phone": "07-950 8914",
+    "roomLocation": "PC-102A",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/00805.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/sahidan",
+    "specialities": [
+      "07- 950 8914"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  },
+  {
+    "id": "fsktm-mohamad-afiq-bin-mazni",
+    "name": "ENCIK MOHAMAD AFIQ BIN MAZNI",
+    "cleanName": "MOHAMAD AFIQ BIN MAZNI",
+    "title": "ENCIK",
+    "role": "JA5 PENOLONG JURUTERA",
+    "staffId": "03404",
+    "facultyCode": "FSKTM",
+    "facultyName": "Fakulti Sains Komputer dan Teknologi Maklumat",
+    "department": "ICT Division",
+    "username": "afiqm",
+    "email": "afiqm@uthm.edu.my",
+    "phone": "07-950 8917",
+    "roomLocation": "PC-102B",
+    "avatarUrl": "https://community.uthm.edu.my/files/profile/03404.jpeg",
+    "communityUrl": "https://community.uthm.edu.my/afiqm",
+    "specialities": [
+      "07- 950 8917"
+    ],
+    "currentSubjects": [],
+    "isAvailableFYP": false
+  }
+];
+
+export default FSKTM_LECTURERS;
