@@ -415,63 +415,6 @@ input, select, textarea {
     border-color: var(--primary);
 }
 
-/* Live UTHM Community Photo & Identity Preview */
-.id-live-preview {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.65rem 0.85rem;
-    margin-top: 0.5rem;
-    background: var(--surface-hover);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    animation: fadeIn 0.2s ease;
-}
-
-.id-live-avatar {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-sm);
-}
-
-.id-live-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    min-width: 0;
-}
-
-.id-live-name {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.id-live-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.72rem;
-}
-
-.id-live-role-badge {
-    color: var(--primary);
-    background: var(--primary-light);
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.id-live-source {
-    color: var(--text-muted);
-    font-size: 0.7rem;
-}
-
 .form-row {
     display: flex;
     justify-content: space-between;

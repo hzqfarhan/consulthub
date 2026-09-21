@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
-import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   GraduationCap,
   CalendarCheck,
@@ -22,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export default function AuthView() {
-  const { login, showToast, users } = useConsultHub();
+  const { login, showToast } = useConsultHub();
   const [isRegister, setIsRegister] = useState(false);
   const [selectedRole, setSelectedRole] = useState('student');
   const [showPassword, setShowPassword] = useState(false);
@@ -30,14 +29,6 @@ export default function AuthView() {
   // Login form state (Matric Number for student, Staff ID for lecturer/admin)
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('password123');
-
-  const cleanIdentifier = (identifier || '').trim().toUpperCase();
-  const matchedUser =
-    selectedRole === 'student'
-      ? users?.students?.find((s) => s.matric.toUpperCase() === cleanIdentifier)
-      : selectedRole === 'lecturer'
-      ? users?.lecturers?.find((l) => l.staffId.toUpperCase() === cleanIdentifier)
-      : users?.admins?.find((a) => a.staffId.toUpperCase() === cleanIdentifier);
 
   // Register form state
   const [regName, setRegName] = useState('');
@@ -172,34 +163,6 @@ export default function AuthView() {
                     required
                   />
                 </div>
-
-                {cleanIdentifier && (
-                  <div className="id-live-preview">
-                    <UTHMAvatar
-                      idNumber={cleanIdentifier}
-                      role={selectedRole}
-                      size={42}
-                      className="id-live-avatar"
-                    />
-                    <div className="id-live-details">
-                      <span className="id-live-name">
-                        {matchedUser
-                          ? matchedUser.name
-                          : selectedRole === 'student'
-                          ? `Student ${cleanIdentifier}`
-                          : selectedRole === 'lecturer'
-                          ? `Lecturer ${cleanIdentifier}`
-                          : `Admin ${cleanIdentifier}`}
-                      </span>
-                      <div className="id-live-meta">
-                        <span className="id-live-role-badge">
-                          {selectedRole === 'student' ? 'Matric Verified' : 'Staff ID Verified'}
-                        </span>
-                        <span className="id-live-source">community.uthm.edu.my</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
 
               <div className="form-group">
