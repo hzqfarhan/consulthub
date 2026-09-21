@@ -1,5 +1,6 @@
 {
-    "buildCommand": null,
+    "installCommand": "echo 'No dependencies to install'",
+    "buildCommand": "echo 'Static site - no build needed'",
     "outputDirectory": ".",
     "framework": null,
     "rewrites": [

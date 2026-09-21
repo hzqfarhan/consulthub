@@ -1,21 +1,12 @@
 {
     "name": "consulthub",
     "version": "1.0.0",
-    "description": "FSKTM Student Consultation Booking System — A PWA for managing consultation appointments between students and lecturers.",
+    "description": "FSKTM Student Consultation Booking System",
     "private": true,
     "scripts": {
-        "dev": "npx serve .",
-        "dev:next": "next dev",
-        "build:next": "next build",
-        "start:next": "next start"
+        "dev": "npx serve ."
     },
-    "keywords": [
-        "consultation",
-        "booking",
-        "fsktm",
-        "university",
-        "pwa"
-    ],
+    "keywords": ["consultation", "booking", "fsktm", "pwa"],
     "author": "hzqfarhan",
     "license": "MIT"
 }
