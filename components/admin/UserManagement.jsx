@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Users,
   Search,
@@ -95,7 +96,7 @@ export default function UserManagement() {
               <tr key={user.id}>
                 <td>
                   <div className="table-user-cell">
-                    <div className="avatar avatar-sm">{user.avatar}</div>
+                    <UTHMAvatar user={user} size={32} className="avatar-sm" />
                     <div>
                       <span className="table-user-name">{user.name}</span>
                       <span className="table-user-sub">{user.email}</span>

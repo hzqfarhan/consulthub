@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Search,
   MapPin,
@@ -102,7 +103,7 @@ export default function BrowseLecturers() {
             return (
               <div key={lecturer.id} className="lecturer-card">
                 <div className="lecturer-card-header">
-                  <div className="avatar avatar-lg">{lecturer.avatar}</div>
+                  <UTHMAvatar user={lecturer} size={56} className="avatar-lg" />
                   <div className="lecturer-info">
                     <h3>{lecturer.name}</h3>
                     <span className="spec-badge">{lecturer.specialization}</span>

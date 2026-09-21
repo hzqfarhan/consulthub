@@ -3,6 +3,7 @@
 import React from 'react';
 import { useConsultHub } from '@/lib/context';
 import { Menu, Search, Bell } from 'lucide-react';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 
 const PAGE_TITLES = {
   dashboard: 'Dashboard',
@@ -72,7 +73,7 @@ export default function Header() {
           role="button"
           tabIndex={0}
         >
-          <div className="avatar">{currentUser?.avatar || 'U'}</div>
+          <UTHMAvatar user={currentUser} size={36} />
         </div>
       </div>
     </header>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   Clock,
@@ -116,7 +117,7 @@ export default function ManageBookings() {
                   <tr key={item.id}>
                     <td>
                       <div className="table-user-cell">
-                        <div className="avatar avatar-sm">{student?.avatar || 'S'}</div>
+                        <UTHMAvatar user={student} size={32} className="avatar-sm" />
                         <div>
                           <span className="table-user-name">{student?.name || 'Student'}</span>
                           <span className="table-user-sub">

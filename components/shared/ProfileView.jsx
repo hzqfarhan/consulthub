@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   User,
   Mail,
@@ -71,7 +72,7 @@ export default function ProfileView() {
           </div>
 
           <div className="profile-avatar-header">
-            <div className="avatar avatar-xl">{currentUser?.avatar || 'U'}</div>
+            <UTHMAvatar user={currentUser} size={80} className="avatar-xl" />
             <div className="profile-avatar-meta">
               <h4>{currentUser?.name}</h4>
               <span className="text-muted text-sm">{currentUser?.email}</span>

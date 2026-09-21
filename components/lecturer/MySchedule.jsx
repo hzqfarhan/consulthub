@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   Clock,
@@ -85,7 +86,7 @@ export default function MySchedule() {
                   </div>
 
                   <div className="schedule-student-details">
-                    <div className="avatar avatar-md">{student?.avatar || 'S'}</div>
+                    <UTHMAvatar user={student} size={44} className="avatar-md" />
                     <div className="student-text">
                       <h4>{student?.name || 'Student'}</h4>
                       <span className="student-sub">

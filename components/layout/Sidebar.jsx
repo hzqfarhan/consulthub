@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   GraduationCap,
   LayoutDashboard,
@@ -154,9 +155,7 @@ export default function Sidebar() {
             role="button"
             tabIndex={0}
           >
-            <div className="avatar" id="sidebar-avatar">
-              {currentUser?.avatar || 'U'}
-            </div>
+            <UTHMAvatar user={currentUser} size={36} />
             <div className="sidebar-user-info">
               <span className="sidebar-user-name">
                 {currentUser ? currentUser.name.split(' ').slice(0, 2).join(' ') : 'Guest'}

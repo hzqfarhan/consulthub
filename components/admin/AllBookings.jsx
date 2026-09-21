@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   Search,
@@ -121,7 +122,7 @@ export default function AllBookings() {
 
                   <td>
                     <div className="table-user-cell">
-                      <div className="avatar avatar-xs">{student?.avatar || 'S'}</div>
+                      <UTHMAvatar user={student} size={28} className="avatar-xs" />
                       <div>
                         <span className="table-user-name text-xs">{student?.name || 'Student'}</span>
                         <span className="table-user-sub text-xs">{student?.matric}</span>
@@ -131,7 +132,7 @@ export default function AllBookings() {
 
                   <td>
                     <div className="table-user-cell">
-                      <div className="avatar avatar-xs">{lecturer?.avatar || 'L'}</div>
+                      <UTHMAvatar user={lecturer} size={28} className="avatar-xs" />
                       <div>
                         <span className="table-user-name text-xs">{lecturer?.name || 'Lecturer'}</span>
                         <span className="table-user-sub text-xs">{lecturer?.department}</span>

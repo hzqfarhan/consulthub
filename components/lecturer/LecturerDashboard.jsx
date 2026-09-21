@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   CalendarCheck,
@@ -128,7 +129,7 @@ export default function LecturerDashboard() {
                 return (
                   <div key={item.id} className="pending-request-card">
                     <div className="request-student-info">
-                      <div className="avatar">{student?.avatar || 'S'}</div>
+                      <UTHMAvatar user={student} size={36} />
                       <div className="student-name-col">
                         <h4>{student?.name || 'Student'}</h4>
                         <span className="student-meta">

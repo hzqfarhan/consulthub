@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   ArrowLeft,
   MapPin,
@@ -85,7 +86,7 @@ export default function LecturerDetail() {
       </div>
 
       <div className="lecturer-profile-banner">
-        <div className="avatar avatar-xl">{lecturer.avatar}</div>
+        <UTHMAvatar user={lecturer} size={80} className="avatar-xl" />
         <div className="profile-details">
           <h2>{lecturer.name}</h2>
           <div className="badge-row">
