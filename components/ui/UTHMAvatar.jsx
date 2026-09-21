@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getProfileImageUrl } from '@/lib/data';
 
 /**
@@ -9,6 +9,7 @@ import { getProfileImageUrl } from '@/lib/data';
  */
 export default function UTHMAvatar({
   user,
+  role = '',
   name = '',
   email = '',
   idNumber = '',
@@ -20,12 +21,17 @@ export default function UTHMAvatar({
   // Normalize user data if passed as object
   const resolvedName = user?.name || name || 'User';
   const resolvedEmail = user?.email || email || '';
-  const resolvedId =
-    user?.matric || user?.staffId || idNumber || '';
+  const resolvedId = user?.matric || user?.staffId || idNumber || '';
+  const resolvedRole = user?.matric ? 'student' : user?.staffId ? 'lecturer' : role;
   const resolvedAvatarInitial =
     user?.avatar || (resolvedName ? resolvedName.charAt(0).toUpperCase() : 'U');
 
-  const imageUrl = getProfileImageUrl(resolvedEmail, resolvedId);
+  const imageUrl = getProfileImageUrl(resolvedEmail, resolvedId, resolvedRole);
+
+  // Reset error whenever the image URL changes
+  useEffect(() => {
+    setHasError(false);
+  }, [imageUrl]);
 
   if (hasError || !imageUrl) {
     return (
@@ -47,6 +53,7 @@ export default function UTHMAvatar({
         src={imageUrl}
         alt={resolvedName}
         className="avatar-img"
+        loading="lazy"
         onError={() => setHasError(true)}
       />
     </div>

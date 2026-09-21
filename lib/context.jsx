@@ -57,16 +57,156 @@ export function ConsultHubProvider({ children }) {
   };
 
   // Auth actions
-  const login = (role) => {
+  const login = (role, identifier = '') => {
     setCurrentRole(role);
-    let user;
-    if (role === 'student') user = users.students[0];
-    else if (role === 'lecturer') user = users.lecturers[0];
-    else user = users.admins[0];
+    const cleanId = String(identifier || '').trim().toUpperCase();
+
+    let user = null;
+
+    if (role === 'student') {
+      if (cleanId) {
+        user = users.students.find(
+          (s) =>
+            s.matric.toUpperCase() === cleanId ||
+            s.email.toLowerCase() === identifier.trim().toLowerCase()
+        );
+      }
+      if (!user) {
+        if (cleanId) {
+          // Determine programme from matric prefix
+          const prefix = cleanId.replace(/[0-9].*$/, '').toUpperCase();
+          const programmeMap = {
+            AI: 'Software Engineering',
+            BI: 'Information Security',
+            CI: 'Data Science',
+            DI: 'Computer Science',
+            BIT: 'Information Technology',
+            BIP: 'Information Technology',
+            BIS: 'Information Security',
+            BIM: 'Multimedia Computing',
+            BIW: 'Web Technology',
+          };
+          const programme = programmeMap[prefix] || 'Software Engineering';
+
+          // Determine year from 2-digit intake year
+          let year = 2;
+          const yearMatch = cleanId.match(/\d{2}/);
+          if (yearMatch) {
+            const intakeYear = 2000 + parseInt(yearMatch[0], 10);
+            const calculatedYear = 2026 - intakeYear + 1;
+            year = Math.max(1, Math.min(4, calculatedYear));
+          }
+
+          // Dynamically instantiate student by entered matric number
+          user = {
+            id: generateId('S'),
+            name: `Student ${cleanId}`,
+            email: `${cleanId.toLowerCase()}@student.uthm.edu.my`,
+            phone: '+60 12-345 6789',
+            programme,
+            year,
+            matric: cleanId,
+            avatar: cleanId.slice(0, 2),
+            noShows: 0,
+          };
+          setUsers((prev) => ({
+            ...prev,
+            students: [user, ...prev.students],
+          }));
+        } else {
+          user = users.students[0];
+        }
+      }
+    } else if (role === 'lecturer') {
+      if (cleanId) {
+        user = users.lecturers.find(
+          (l) =>
+            l.staffId.toUpperCase() === cleanId ||
+            l.email.toLowerCase() === identifier.trim().toLowerCase()
+        );
+      }
+      if (!user) {
+        if (cleanId) {
+          // Dynamically instantiate lecturer by entered staff ID
+          const newLecturerId = generateId('L');
+          user = {
+            id: newLecturerId,
+            name: `Lecturer ${cleanId}`,
+            email: `${cleanId.toLowerCase()}@uthm.edu.my`,
+            phone: '+60 19-111 2222',
+            department: 'Software Engineering',
+            office: 'Block N28, Faculty of Computer Science & Information Technology',
+            staffId: cleanId,
+            avatar: cleanId.slice(0, 2),
+            specialization: 'Faculty Advisor',
+          };
+          setUsers((prev) => ({
+            ...prev,
+            lecturers: [user, ...prev.lecturers],
+          }));
+          // Seed standard consultation availability for new lecturer
+          setAvailability((prev) => ({
+            ...prev,
+            [newLecturerId]: [
+              {
+                day: 'Monday',
+                slots: [
+                  { start: '10:00', end: '11:00', location: 'Block N28, Room 3.12' },
+                  { start: '14:00', end: '15:00', location: 'Online (Google Meet)' },
+                ],
+              },
+              {
+                day: 'Wednesday',
+                slots: [
+                  { start: '09:00', end: '10:00', location: 'Block N28, Room 3.12' },
+                  { start: '11:00', end: '12:00', location: 'Block N28, Room 3.12' },
+                ],
+              },
+              {
+                day: 'Thursday',
+                slots: [
+                  { start: '14:00', end: '15:00', location: 'Online (Google Meet)' },
+                ],
+              },
+            ],
+          }));
+        } else {
+          user = users.lecturers[0];
+        }
+      }
+    } else {
+      // Admin
+      if (cleanId) {
+        user = users.admins.find(
+          (a) =>
+            a.staffId.toUpperCase() === cleanId ||
+            a.id.toUpperCase() === cleanId ||
+            a.email.toLowerCase() === identifier.trim().toLowerCase()
+        );
+      }
+      if (!user) {
+        if (cleanId) {
+          user = {
+            id: generateId('A'),
+            name: `Admin ${cleanId}`,
+            email: `${cleanId.toLowerCase()}@uthm.edu.my`,
+            phone: '+60 19-999 0000',
+            staffId: cleanId,
+            avatar: cleanId.slice(0, 2),
+          };
+          setUsers((prev) => ({
+            ...prev,
+            admins: [user, ...prev.admins],
+          }));
+        } else {
+          user = users.admins[0];
+        }
+      }
+    }
 
     setCurrentUser(user);
     navigate('dashboard');
-    showToast(`Welcome back, ${user.name.split(' ')[0]}!`, 'success');
+    showToast(`Signed in as ${user.name} (${user.matric || user.staffId}).`, 'success');
   };
 
   const logout = () => {

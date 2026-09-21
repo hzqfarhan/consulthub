@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   GraduationCap,
   CalendarCheck,
@@ -21,14 +22,22 @@ import {
 } from 'lucide-react';
 
 export default function AuthView() {
-  const { login, showToast } = useConsultHub();
+  const { login, showToast, users } = useConsultHub();
   const [isRegister, setIsRegister] = useState(false);
   const [selectedRole, setSelectedRole] = useState('student');
   const [showPassword, setShowPassword] = useState(false);
 
-  // Login form state
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // Login form state (Matric Number for student, Staff ID for lecturer/admin)
+  const [identifier, setIdentifier] = useState('AI220123');
+  const [password, setPassword] = useState('password123');
+
+  const cleanIdentifier = (identifier || '').trim().toUpperCase();
+  const matchedUser =
+    selectedRole === 'student'
+      ? users?.students?.find((s) => s.matric.toUpperCase() === cleanIdentifier)
+      : selectedRole === 'lecturer'
+      ? users?.lecturers?.find((l) => l.staffId.toUpperCase() === cleanIdentifier)
+      : users?.admins?.find((a) => a.staffId.toUpperCase() === cleanIdentifier);
 
   // Register form state
   const [regName, setRegName] = useState('');
@@ -40,9 +49,16 @@ export default function AuthView() {
   const [regPassword, setRegPassword] = useState('');
   const [regPassword2, setRegPassword2] = useState('');
 
+  const handleRoleChange = (role) => {
+    setSelectedRole(role);
+    if (role === 'student') setIdentifier('AI220123');
+    else if (role === 'lecturer') setIdentifier('01234');
+    else setIdentifier('H5678');
+  };
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    login(selectedRole);
+    login(selectedRole, identifier, password);
   };
 
   const handleRegisterSubmit = (e) => {
@@ -100,7 +116,7 @@ export default function AuthView() {
             <button
               type="button"
               className={`role-tab ${selectedRole === 'student' ? 'active' : ''}`}
-              onClick={() => setSelectedRole('student')}
+              onClick={() => handleRoleChange('student')}
             >
               <User size={16} />
               <span>Student</span>
@@ -108,7 +124,7 @@ export default function AuthView() {
             <button
               type="button"
               className={`role-tab ${selectedRole === 'lecturer' ? 'active' : ''}`}
-              onClick={() => setSelectedRole('lecturer')}
+              onClick={() => handleRoleChange('lecturer')}
             >
               <UserCheck size={16} />
               <span>Lecturer</span>
@@ -117,7 +133,7 @@ export default function AuthView() {
               <button
                 type="button"
                 className={`role-tab ${selectedRole === 'admin' ? 'active' : ''}`}
-                onClick={() => setSelectedRole('admin')}
+                onClick={() => handleRoleChange('admin')}
               >
                 <ShieldCheck size={16} />
                 <span>Admin</span>
@@ -129,24 +145,125 @@ export default function AuthView() {
             /* Login Form */
             <form onSubmit={handleLoginSubmit} className="auth-form">
               <div className="form-group">
-                <label htmlFor="login-email">Email Address</label>
+                <label htmlFor="login-identifier">
+                  {selectedRole === 'student' ? 'Matric Number' : 'Staff Identification ID'}
+                </label>
                 <div className="input-icon">
-                  <Mail size={18} className="input-icon-svg" />
+                  <Fingerprint size={18} className="input-icon-svg" />
                   <input
-                    type="email"
-                    id="login-email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    id="login-identifier"
+                    value={identifier}
+                    onChange={(e) => setIdentifier(e.target.value)}
                     placeholder={
                       selectedRole === 'student'
-                        ? 'haziq@student.fsktm.edu'
+                        ? 'e.g. AI220123'
                         : selectedRole === 'lecturer'
-                        ? 'faisal@fsktm.edu'
-                        : 'zainab@fsktm.edu'
+                        ? 'e.g. 01234'
+                        : 'e.g. H5678'
                     }
                     required
                   />
                 </div>
+                <div className="id-helper-row">
+                  <span className="helper-label">Quick Select:</span>
+                  <div className="quick-id-chips">
+                    {selectedRole === 'student' && (
+                      <>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === 'AI220123' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('AI220123')}
+                        >
+                          AI220123
+                        </button>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === 'AI220045' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('AI220045')}
+                        >
+                          AI220045
+                        </button>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === 'BI210088' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('BI210088')}
+                        >
+                          BI210088
+                        </button>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === 'AI220199' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('AI220199')}
+                        >
+                          AI220199
+                        </button>
+                      </>
+                    )}
+                    {selectedRole === 'lecturer' && (
+                      <>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === '01234' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('01234')}
+                        >
+                          01234
+                        </button>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === '02345' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('02345')}
+                        >
+                          02345
+                        </button>
+                        <button
+                          type="button"
+                          className={`id-chip ${cleanIdentifier === '03456' ? 'active' : ''}`}
+                          onClick={() => setIdentifier('03456')}
+                        >
+                          03456
+                        </button>
+                      </>
+                    )}
+                    {selectedRole === 'admin' && (
+                      <button
+                        type="button"
+                        className={`id-chip ${cleanIdentifier === 'H5678' ? 'active' : ''}`}
+                        onClick={() => setIdentifier('H5678')}
+                      >
+                        H5678
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {cleanIdentifier && (
+                  <div className="id-live-preview">
+                    <UTHMAvatar
+                      idNumber={cleanIdentifier}
+                      role={selectedRole}
+                      size={42}
+                      className="id-live-avatar"
+                    />
+                    <div className="id-live-details">
+                      <span className="id-live-name">
+                        {matchedUser
+                          ? matchedUser.name
+                          : selectedRole === 'student'
+                          ? `Student ${cleanIdentifier}`
+                          : selectedRole === 'lecturer'
+                          ? `Lecturer ${cleanIdentifier}`
+                          : `Admin ${cleanIdentifier}`}
+                      </span>
+                      <div className="id-live-meta">
+                        <span className="id-live-role-badge">
+                          {selectedRole === 'student' ? 'Matric Verified' : 'Staff ID Verified'}
+                        </span>
+                        <span className="id-live-source">community.uthm.edu.my</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="form-group">
