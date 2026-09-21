@@ -9,22 +9,22 @@ const MOCK_DATA = {
     // Users
     users: {
         students: [
-            { id: 'S001', name: 'Muhammad Haziq', email: 'haziq@student.fsktm.edu', phone: '+60 12-345 6789', programme: 'Software Engineering', year: 2, matric: 'A22CS0001', avatar: 'MH', noShows: 0 },
-            { id: 'S002', name: 'Nur Aisyah Binti Rahman', email: 'aisyah@student.fsktm.edu', phone: '+60 13-456 7890', programme: 'Computer Science', year: 1, matric: 'A22CS0002', avatar: 'NA', noShows: 1 },
-            { id: 'S003', name: 'Ahmad Irfan', email: 'irfan@student.fsktm.edu', phone: '+60 14-567 8901', programme: 'Data Science', year: 3, matric: 'A22CS0003', avatar: 'AI', noShows: 0 },
-            { id: 'S004', name: 'Siti Fatimah', email: 'fatimah@student.fsktm.edu', phone: '+60 15-678 9012', programme: 'Software Engineering', year: 2, matric: 'A22CS0004', avatar: 'SF', noShows: 2 },
-            { id: 'S005', name: 'Lee Wei Jie', email: 'weijie@student.fsktm.edu', phone: '+60 16-789 0123', programme: 'Information Security', year: 4, matric: 'A22CS0005', avatar: 'LW', noShows: 0 },
-            { id: 'S006', name: 'Priya Nair', email: 'priya@student.fsktm.edu', phone: '+60 17-890 1234', programme: 'Computer Science', year: 1, matric: 'A22CS0006', avatar: 'PN', noShows: 0 },
+            { id: 'S001', name: 'Muhammad Haziq', email: 'haziq@student.uthm.edu.my', phone: '+60 12-345 6789', programme: 'Software Engineering', year: 2, matric: 'AI220123', avatar: 'MH', noShows: 0 },
+            { id: 'S002', name: 'Nur Aisyah Binti Rahman', email: 'aisyah@student.uthm.edu.my', phone: '+60 13-456 7890', programme: 'Computer Science', year: 1, matric: 'AI220045', avatar: 'NA', noShows: 1 },
+            { id: 'S003', name: 'Ahmad Irfan', email: 'irfan@student.uthm.edu.my', phone: '+60 14-567 8901', programme: 'Data Science', year: 3, matric: 'BI210088', avatar: 'AI', noShows: 0 },
+            { id: 'S004', name: 'Siti Fatimah', email: 'fatimah@student.uthm.edu.my', phone: '+60 15-678 9012', programme: 'Software Engineering', year: 2, matric: 'AI220199', avatar: 'SF', noShows: 2 },
+            { id: 'S005', name: 'Lee Wei Jie', email: 'weijie@student.uthm.edu.my', phone: '+60 16-789 0123', programme: 'Information Security', year: 4, matric: 'CI200032', avatar: 'LW', noShows: 0 },
+            { id: 'S006', name: 'Priya Nair', email: 'priya@student.uthm.edu.my', phone: '+60 17-890 1234', programme: 'Computer Science', year: 1, matric: 'AI230015', avatar: 'PN', noShows: 0 },
         ],
         lecturers: [
-            { id: 'L001', name: 'Dr. Ahmad Faisal', email: 'faisal@fsktm.edu', phone: '+60 19-111 2222', department: 'Software Engineering', office: 'Block N28, Room 3.12', staffId: 'FS0001', avatar: 'AF', specialization: 'Software Design' },
-            { id: 'L002', name: 'Dr. Nurul Huda', email: 'huda@fsktm.edu', phone: '+60 19-222 3333', department: 'Computer Science', office: 'Block N28, Room 2.08', staffId: 'FS0002', avatar: 'NH', specialization: 'Artificial Intelligence' },
-            { id: 'L003', name: 'Prof. Lim Chee Keong', email: 'ckli@fsktm.edu', phone: '+60 19-333 4444', department: 'Data Science', office: 'Block N28, Room 4.15', staffId: 'FS0003', avatar: 'LC', specialization: 'Machine Learning' },
-            { id: 'L004', name: 'Dr. Rashid Ibrahim', email: 'rashid@fsktm.edu', phone: '+60 19-444 5555', department: 'Information Security', office: 'Block N28, Room 1.20', staffId: 'FS0004', avatar: 'RI', specialization: 'Cybersecurity' },
-            { id: 'L005', name: 'Dr. Sarah Tan', email: 'sarah@fsktm.edu', phone: '+60 19-555 6666', department: 'Software Engineering', office: 'Block N28, Room 3.05', staffId: 'FS0005', avatar: 'ST', specialization: 'Web Technologies' },
+            { id: 'L001', name: 'Dr. Ahmad Faisal', email: 'faisal@uthm.edu.my', phone: '+60 19-111 2222', department: 'Software Engineering', office: 'Block N28, Room 3.12', staffId: '01234', avatar: 'AF', specialization: 'Software Design' },
+            { id: 'L002', name: 'Dr. Nurul Huda', email: 'huda@uthm.edu.my', phone: '+60 19-222 3333', department: 'Computer Science', office: 'Block N28, Room 2.08', staffId: '02345', avatar: 'NH', specialization: 'Artificial Intelligence' },
+            { id: 'L003', name: 'Prof. Lim Chee Keong', email: 'ckli@uthm.edu.my', phone: '+60 19-333 4444', department: 'Data Science', office: 'Block N28, Room 4.15', staffId: '03456', avatar: 'LC', specialization: 'Machine Learning' },
+            { id: 'L004', name: 'Dr. Rashid Ibrahim', email: 'rashid@uthm.edu.my', phone: '+60 19-444 5555', department: 'Information Security', office: 'Block N28, Room 1.20', staffId: '04567', avatar: 'RI', specialization: 'Cybersecurity' },
+            { id: 'L005', name: 'Dr. Sarah Tan', email: 'sarah@uthm.edu.my', phone: '+60 19-555 6666', department: 'Software Engineering', office: 'Block N28, Room 3.05', staffId: '05678', avatar: 'ST', specialization: 'Web Technologies' },
         ],
         admins: [
-            { id: 'A001', name: 'Puan Zainab', email: 'zainab@fsktm.edu', phone: '+60 19-999 0000', staffId: 'FA0001', avatar: 'PZ' },
+            { id: 'A001', name: 'Puan Zainab', email: 'zainab@uthm.edu.my', phone: '+60 19-999 0000', staffId: 'H5678', avatar: 'PZ' },
         ]
     },
 
@@ -124,4 +124,41 @@ function getDateParts(dateStr) {
 // Generate unique ID
 function generateId(prefix) {
     return prefix + String(Math.floor(Math.random() * 90000) + 10000);
+}
+
+// UTHM Profile Image URL Resolver (photofetch.md specification)
+function getProfileImageUrl(email = '', idNumber = '', role = '') {
+    if (!idNumber) return '';
+    const cleanEmail = (email || '').toLowerCase().trim();
+    const rawId = String(idNumber).split(',')[0].trim().toUpperCase();
+    const cleanRole = (role || '').toLowerCase().trim();
+
+    let isStudent = false;
+    if (cleanRole === 'student') {
+        isStudent = true;
+    } else if (cleanRole === 'lecturer' || cleanRole === 'staff' || cleanRole === 'admin') {
+        isStudent = false;
+    } else if (cleanEmail.includes('student') || cleanEmail.endsWith('@student.uthm.edu.my')) {
+        isStudent = true;
+    } else if (cleanEmail.endsWith('@uthm.edu.my')) {
+        isStudent = false;
+    } else if (/^\d{3,6}$/.test(rawId) || /^[A-Z]\d{4}$/.test(rawId)) {
+        isStudent = false;
+    } else {
+        isStudent = /^[A-Z]/.test(rawId);
+    }
+
+    if (isStudent) {
+        const matric = rawId;
+        let session = '20252026';
+        const yearMatch = matric.match(/\d{2}/);
+        if (yearMatch) {
+            const startYear = 2000 + parseInt(yearMatch[0], 10);
+            const endYear = startYear + 1;
+            session = `${startYear}${endYear}`;
+        }
+        return `https://community.uthm.edu.my/images/students/${session}/${matric}.jpg`;
+    }
+
+    return `https://community.uthm.edu.my/images/profiles/${rawId}.jpg`;
 }

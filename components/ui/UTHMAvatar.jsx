@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getProfileImageUrl } from '@/lib/data';
+import { getProfileImageUrl } from '@/lib/utils';
 
 /**
  * UTHMAvatar component resolving student & staff photos from community.uthm.edu.my
  * with graceful fallback to monogram initial avatars when 404 or missing.
+ * Conforms to photofetch.md specification.
  */
-export default function UTHMAvatar({
+export function UTHMAvatar({
   user,
   role = '',
   name = '',
@@ -18,7 +19,7 @@ export default function UTHMAvatar({
 }) {
   const [hasError, setHasError] = useState(false);
 
-  // Normalize user data if passed as object
+  // Normalize user data if passed as object or individual props
   const resolvedName = user?.name || name || 'User';
   const resolvedEmail = user?.email || email || '';
   const resolvedId = user?.matric || user?.staffId || idNumber || '';
@@ -59,3 +60,5 @@ export default function UTHMAvatar({
     </div>
   );
 }
+
+export default UTHMAvatar;

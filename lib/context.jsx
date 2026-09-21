@@ -57,7 +57,7 @@ export function ConsultHubProvider({ children }) {
   };
 
   // Auth actions
-  const login = (role, identifier = '') => {
+  const login = (role, identifier = '', extraData = null) => {
     setCurrentRole(role);
     const cleanId = String(identifier || '').trim().toUpperCase();
 
@@ -86,12 +86,12 @@ export function ConsultHubProvider({ children }) {
             BIM: 'Multimedia Computing',
             BIW: 'Web Technology',
           };
-          const programme = programmeMap[prefix] || 'Software Engineering';
+          const programme = extraData?.programme || programmeMap[prefix] || 'Software Engineering';
 
           // Determine year from 2-digit intake year
-          let year = 2;
+          let year = extraData?.year ? Number(extraData.year) : 2;
           const yearMatch = cleanId.match(/\d{2}/);
-          if (yearMatch) {
+          if (yearMatch && !extraData?.year) {
             const intakeYear = 2000 + parseInt(yearMatch[0], 10);
             const calculatedYear = 2026 - intakeYear + 1;
             year = Math.max(1, Math.min(4, calculatedYear));
@@ -100,13 +100,13 @@ export function ConsultHubProvider({ children }) {
           // Dynamically instantiate student by entered matric number
           user = {
             id: generateId('S'),
-            name: `Student ${cleanId}`,
-            email: `${cleanId.toLowerCase()}@student.uthm.edu.my`,
-            phone: '+60 12-345 6789',
+            name: extraData?.name || `Student ${cleanId}`,
+            email: extraData?.email || `${cleanId.toLowerCase()}@student.uthm.edu.my`,
+            phone: extraData?.phone || '+60 12-345 6789',
             programme,
             year,
             matric: cleanId,
-            avatar: cleanId.slice(0, 2),
+            avatar: (extraData?.name || cleanId).slice(0, 2).toUpperCase(),
             noShows: 0,
           };
           setUsers((prev) => ({
@@ -131,14 +131,14 @@ export function ConsultHubProvider({ children }) {
           const newLecturerId = generateId('L');
           user = {
             id: newLecturerId,
-            name: `Lecturer ${cleanId}`,
-            email: `${cleanId.toLowerCase()}@uthm.edu.my`,
-            phone: '+60 19-111 2222',
-            department: 'Software Engineering',
-            office: 'Block N28, Faculty of Computer Science & Information Technology',
+            name: extraData?.name || `Lecturer ${cleanId}`,
+            email: extraData?.email || `${cleanId.toLowerCase()}@uthm.edu.my`,
+            phone: extraData?.phone || '+60 19-111 2222',
+            department: extraData?.department || 'Software Engineering',
+            office: extraData?.office || 'Block N28, Faculty of Computer Science & Information Technology',
             staffId: cleanId,
-            avatar: cleanId.slice(0, 2),
-            specialization: 'Faculty Advisor',
+            avatar: (extraData?.name || cleanId).slice(0, 2).toUpperCase(),
+            specialization: extraData?.specialization || 'Faculty Advisor',
           };
           setUsers((prev) => ({
             ...prev,

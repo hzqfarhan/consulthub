@@ -28,7 +28,7 @@ export default function AuthView() {
   const [showPassword, setShowPassword] = useState(false);
 
   // Login form state (Matric Number for student, Staff ID for lecturer/admin)
-  const [identifier, setIdentifier] = useState('AI220123');
+  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('password123');
 
   const cleanIdentifier = (identifier || '').trim().toUpperCase();
@@ -51,9 +51,7 @@ export default function AuthView() {
 
   const handleRoleChange = (role) => {
     setSelectedRole(role);
-    if (role === 'student') setIdentifier('AI220123');
-    else if (role === 'lecturer') setIdentifier('01234');
-    else setIdentifier('H5678');
+    setIdentifier('');
   };
 
   const handleLoginSubmit = (e) => {
@@ -67,10 +65,19 @@ export default function AuthView() {
       showToast('Passwords do not match.', 'danger');
       return;
     }
+    const cleanRegId = regId.trim().toUpperCase();
+    const extraData = {
+      name: regName.trim(),
+      email: regEmail.trim(),
+      phone: regPhone.trim(),
+      programme: regDept.trim(),
+      department: regDept.trim(),
+      year: regYear,
+    };
     showToast('Account created successfully. Logging in...', 'success');
     setTimeout(() => {
-      login(selectedRole);
-    }, 500);
+      login(selectedRole, cleanRegId, extraData);
+    }, 400);
   };
 
   return (
@@ -164,77 +171,6 @@ export default function AuthView() {
                     }
                     required
                   />
-                </div>
-                <div className="id-helper-row">
-                  <span className="helper-label">Quick Select:</span>
-                  <div className="quick-id-chips">
-                    {selectedRole === 'student' && (
-                      <>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === 'AI220123' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('AI220123')}
-                        >
-                          AI220123
-                        </button>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === 'AI220045' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('AI220045')}
-                        >
-                          AI220045
-                        </button>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === 'BI210088' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('BI210088')}
-                        >
-                          BI210088
-                        </button>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === 'AI220199' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('AI220199')}
-                        >
-                          AI220199
-                        </button>
-                      </>
-                    )}
-                    {selectedRole === 'lecturer' && (
-                      <>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === '01234' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('01234')}
-                        >
-                          01234
-                        </button>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === '02345' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('02345')}
-                        >
-                          02345
-                        </button>
-                        <button
-                          type="button"
-                          className={`id-chip ${cleanIdentifier === '03456' ? 'active' : ''}`}
-                          onClick={() => setIdentifier('03456')}
-                        >
-                          03456
-                        </button>
-                      </>
-                    )}
-                    {selectedRole === 'admin' && (
-                      <button
-                        type="button"
-                        className={`id-chip ${cleanIdentifier === 'H5678' ? 'active' : ''}`}
-                        onClick={() => setIdentifier('H5678')}
-                      >
-                        H5678
-                      </button>
-                    )}
-                  </div>
                 </div>
 
                 {cleanIdentifier && (
@@ -347,7 +283,7 @@ export default function AuthView() {
                     <input
                       type="text"
                       id="reg-id"
-                      placeholder={selectedRole === 'student' ? 'A22CS0001' : 'FS0001'}
+                      placeholder={selectedRole === 'student' ? 'e.g. AI220123' : 'e.g. 01234'}
                       value={regId}
                       onChange={(e) => setRegId(e.target.value)}
                       required

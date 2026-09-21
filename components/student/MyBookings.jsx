@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   Clock,
@@ -214,9 +215,12 @@ export default function MyBookings() {
 
                 <div className="booking-content-col">
                   <div className="booking-title-row">
-                    <div className="lecturer-name-group">
-                      <h4>{lecturer?.name || 'Lecturer'}</h4>
-                      <span className="booking-dept">{lecturer?.department}</span>
+                    <div className="lecturer-name-group" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <UTHMAvatar user={lecturer} size={36} className="avatar-sm" />
+                      <div>
+                        <h4>{lecturer?.name || 'Lecturer'}</h4>
+                        <span className="booking-dept">{lecturer?.department}</span>
+                      </div>
                     </div>
                     <span className={`status-badge status-${item.status}`}>
                       {item.status.charAt(0).toUpperCase() + item.status.slice(1)}

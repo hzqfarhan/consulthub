@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useConsultHub } from '@/lib/context';
+import UTHMAvatar from '@/components/ui/UTHMAvatar';
 import {
   Calendar,
   CalendarCheck,
@@ -167,7 +168,10 @@ export default function StudentDashboard() {
 
                     <div className="app-details">
                       <div className="app-header-row">
-                        <h4>{lecturer?.name || 'Lecturer'}</h4>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                          <UTHMAvatar user={lecturer} size={28} className="avatar-xs" />
+                          <h4>{lecturer?.name || 'Lecturer'}</h4>
+                        </div>
                         <span className={`status-badge status-${item.status}`}>
                           {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
                         </span>
