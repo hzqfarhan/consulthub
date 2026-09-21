@@ -4,9 +4,21 @@
     "description": "FSKTM Student Consultation Booking System",
     "private": true,
     "scripts": {
-        "dev": "npx serve ."
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
-    "keywords": ["consultation", "booking", "fsktm", "pwa"],
+    "keywords": [
+        "consultation",
+        "booking",
+        "fsktm",
+        "pwa"
+    ],
     "author": "hzqfarhan",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "next": "^14.2.24",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    }
 }

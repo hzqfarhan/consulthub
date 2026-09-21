@@ -1,0 +1,327 @@
+'use client';
+
+import { useEffect } from 'react';
+import Script from 'next/script';
+
+const APP_HTML = `
+    <!-- ==================== AUTH PAGES ==================== -->
+    <div id="auth-container">
+        <!-- Login -->
+        <div id="login-page" class="auth-page active">
+            <div class="auth-left">
+                <div class="auth-brand">
+                    <div class="brand-icon">
+                        <span class="material-icons-round">school</span>
+                    </div>
+                    <h1>ConsultHub</h1>
+                    <p>FSKTM Student Consultation Booking System</p>
+                </div>
+                <div class="auth-illustration">
+                    <div class="floating-card fc1">
+                        <span class="material-icons-round">event_available</span>
+                        <span>Booking Confirmed</span>
+                    </div>
+                    <div class="floating-card fc2">
+                        <span class="material-icons-round">schedule</span>
+                        <span>Mon, 2:00 PM</span>
+                    </div>
+                    <div class="floating-card fc3">
+                        <span class="material-icons-round">person</span>
+                        <span>Dr. Ahmad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-right">
+                <div class="auth-form-wrapper">
+                    <h2>Welcome back</h2>
+                    <p class="auth-subtitle">Sign in to manage your consultations</p>
+
+                    <div class="role-tabs" id="login-role-tabs">
+                        <button class="role-tab active" data-role="student">
+                            <span class="material-icons-round">person</span> Student
+                        </button>
+                        <button class="role-tab" data-role="lecturer">
+                            <span class="material-icons-round">co_present</span> Lecturer
+                        </button>
+                        <button class="role-tab" data-role="admin">
+                            <span class="material-icons-round">admin_panel_settings</span> Admin
+                        </button>
+                    </div>
+
+                    <form id="login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <div class="input-icon">
+                                <span class="material-icons-round">email</span>
+                                <input type="email" id="login-email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <div class="input-icon">
+                                <span class="material-icons-round">lock</span>
+                                <input type="password" id="login-password" placeholder="••••••••" required>
+                                <button type="button" class="toggle-pw" onclick="togglePassword('login-password', this)">
+                                    <span class="material-icons-round">visibility_off</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox"> <span>Remember me</span>
+                            </label>
+                            <a href="#" class="link" onclick="showToast('Password reset link sent to your email!', 'info')">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Sign In</span>
+                            <span class="material-icons-round">arrow_forward</span>
+                        </button>
+                    </form>
+
+                    <p class="auth-footer">
+                        Don't have an account? <a href="#" id="go-to-register" class="link">Create account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register -->
+        <div id="register-page" class="auth-page">
+            <div class="auth-left">
+                <div class="auth-brand">
+                    <div class="brand-icon">
+                        <span class="material-icons-round">school</span>
+                    </div>
+                    <h1>ConsultHub</h1>
+                    <p>FSKTM Student Consultation Booking System</p>
+                </div>
+                <div class="auth-illustration">
+                    <div class="floating-card fc1">
+                        <span class="material-icons-round">how_to_reg</span>
+                        <span>Account Created</span>
+                    </div>
+                    <div class="floating-card fc2">
+                        <span class="material-icons-round">verified</span>
+                        <span>Email Verified</span>
+                    </div>
+                    <div class="floating-card fc3">
+                        <span class="material-icons-round">rocket_launch</span>
+                        <span>Ready to Book!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-right">
+                <div class="auth-form-wrapper">
+                    <h2>Create account</h2>
+                    <p class="auth-subtitle">Join ConsultHub to start booking consultations</p>
+
+                    <div class="role-tabs" id="register-role-tabs">
+                        <button class="role-tab active" data-role="student">
+                            <span class="material-icons-round">person</span> Student
+                        </button>
+                        <button class="role-tab" data-role="lecturer">
+                            <span class="material-icons-round">co_present</span> Lecturer
+                        </button>
+                    </div>
+
+                    <form id="register-form" class="auth-form">
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="reg-name">Full Name</label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">badge</span>
+                                    <input type="text" id="reg-name" placeholder="Muhammad Haziq" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-id">
+                                    <span class="student-field">Matric No</span>
+                                    <span class="lecturer-field" style="display:none">Staff ID</span>
+                                </label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">fingerprint</span>
+                                    <input type="text" id="reg-id" placeholder="A12345" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">Email Address</label>
+                            <div class="input-icon">
+                                <span class="material-icons-round">email</span>
+                                <input type="email" id="reg-email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="reg-phone">Phone Number</label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">phone</span>
+                                    <input type="tel" id="reg-phone" placeholder="+60 12-345 6789">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-dept">
+                                    <span class="student-field">Programme</span>
+                                    <span class="lecturer-field" style="display:none">Department</span>
+                                </label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">apartment</span>
+                                    <input type="text" id="reg-dept" placeholder="Software Engineering" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group student-field">
+                            <label for="reg-year">Year of Study</label>
+                            <div class="input-icon">
+                                <span class="material-icons-round">calendar_today</span>
+                                <select id="reg-year">
+                                    <option value="1">Year 1</option>
+                                    <option value="2">Year 2</option>
+                                    <option value="3">Year 3</option>
+                                    <option value="4">Year 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="reg-pw">Password</label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">lock</span>
+                                    <input type="password" id="reg-pw" placeholder="••••••••" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-pw2">Confirm Password</label>
+                                <div class="input-icon">
+                                    <span class="material-icons-round">lock</span>
+                                    <input type="password" id="reg-pw2" placeholder="••••••••" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Create Account</span>
+                            <span class="material-icons-round">arrow_forward</span>
+                        </button>
+                    </form>
+
+                    <p class="auth-footer">
+                        Already have an account? <a href="#" id="go-to-login" class="link">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN APP ==================== -->
+    <div id="app-container" class="hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-brand" onclick="navigate('dashboard')">
+                <div class="brand-icon-sm">
+                    <span class="material-icons-round">school</span>
+                </div>
+                <span class="sidebar-title">ConsultHub</span>
+            </div>
+
+            <nav id="sidebar-nav">
+                <!-- Populated by JS based on role -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user" onclick="navigate('profile')">
+                    <div class="avatar" id="sidebar-avatar">H</div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name" id="sidebar-username">Haziq</span>
+                        <span class="sidebar-user-role" id="sidebar-userrole">Student</span>
+                    </div>
+                </div>
+                <button class="btn-icon" id="logout-btn" title="Logout">
+                    <span class="material-icons-round">logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main id="main-area">
+            <!-- Header -->
+            <header id="app-header">
+                <div class="header-left">
+                    <button class="btn-icon" id="sidebar-toggle">
+                        <span class="material-icons-round">menu</span>
+                    </button>
+                    <div class="header-breadcrumb">
+                        <span id="page-title">Dashboard</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-search">
+                        <span class="material-icons-round">search</span>
+                        <input type="text" placeholder="Search..." id="global-search">
+                    </div>
+                    <button class="btn-icon notification-bell" id="notif-btn" onclick="navigate('notifications')">
+                        <span class="material-icons-round">notifications</span>
+                        <span class="notif-badge" id="notif-count">3</span>
+                    </button>
+                    <div class="header-avatar" onclick="navigate('profile')">
+                        <div class="avatar" id="header-avatar">H</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div id="page-content">
+                <!-- Rendered by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- ==================== MODAL ==================== -->
+    <div id="modal-overlay" class="hidden" onclick="closeModal(event)">
+        <div class="modal" id="modal-container" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal</h3>
+                <button class="btn-icon" onclick="closeModal()">
+                    <span class="material-icons-round">close</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST ==================== -->
+    <div id="toast-container"></div>
+`;
+
+export default function Home() {
+  useEffect(() => {
+    // Register PWA service worker
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/sw.js')
+          .then((reg) => console.log('[PWA] Service Worker registered:', reg.scope))
+          .catch((err) => console.log('[PWA] Service Worker registration failed:', err));
+      });
+    }
+  }, []);
+
+  const handleAppScriptLoad = () => {
+    if (typeof window !== 'undefined' && typeof window.initConsultHub === 'function') {
+      window.initConsultHub();
+    }
+  };
+
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: APP_HTML }} />
+      <Script src="/data.js" strategy="afterInteractive" />
+      <Script
+        src="/app.js"
+        strategy="afterInteractive"
+        onLoad={handleAppScriptLoad}
+      />
+    </>
+  );
+}

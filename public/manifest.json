@@ -1,0 +1,22 @@
+{
+    "name": "ConsultHub",
+    "short_name": "ConsultHub",
+    "description": "FSKTM Student Consultation Booking System — Book, manage, and track consultation appointments with lecturers.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#F8FAFC",
+    "theme_color": "#4F46E5",
+    "orientation": "any",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "icons/icon-512.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["education", "productivity"],
+    "lang": "en",
+    "dir": "ltr"
+}
