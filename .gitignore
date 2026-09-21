@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+.next/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+.env.local
+.env.production
+
+# PDF (lab sheet, not part of the app)
+*.pdf
